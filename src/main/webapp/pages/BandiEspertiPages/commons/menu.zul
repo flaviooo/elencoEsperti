@@ -1,0 +1,38 @@
+
+<zk xmlns:h="http://www.w3.org/1999/xhtml">
+
+	<h:div id="wrappermenu">
+		<h:div id="colMenu">
+			<h:h3></h:h3>
+			<h:a href="../BandiEspertiPages/welcomePage.zul">
+				<h:h3>HOME</h:h3>
+			</h:a>
+			<h:ul id="MenuCentro">
+				<h:li>
+					<h:a href="datiAnagrafici.zul" id="ButPrezzi"/>
+				</h:li>
+				
+				<h:li>
+					<h:a href="esperienze.zul" id="ButEsperienze"/>
+				</h:li>
+				<h:li>
+					<h:a href="incarichi.zul" id="ButRicerca"/>
+				</h:li>
+				<h:li>
+					<h:a href="istruzione.zul" id="ButNormativa"/>
+				</h:li>
+				<h:li>
+					<h:a href="competenze.zul" id="ButCompetenze"/>
+				</h:li>
+			
+				<h:li>
+					<h:a href="pubblicazione.zul" id="ButPubblicazioni"/>
+				</h:li>
+				<h:li>
+					<h:a href="homeEsperto.zul" id="ButHomeEsperto"/>
+				</h:li>
+			</h:ul>
+			<separator />
+		</h:div>
+	</h:div>
+</zk>

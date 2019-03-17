@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Elenco Esperti" contentType="text/html;charset=UTF-8"?>
+<?meta http-equiv="X-UA-Compatible" content="IE=7,8,9" ?>
+<?meta name="description" value="CSEA Cassa per i servizi energetici e ambientali"?>
+<?link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"?>
+<zk xmlns:h="http://www.w3.org/1999/xhtml">
+	<window border="none" id="win_home_esperto"	apply="it.ccse.bandiEsperti.zk.composers.HomeEsperto"
+	 style="font:80% tahoma,arial,sans-serif;font-size:10pt;" zclass="ContenutoGrey" xmlns:w="client">
+		<include id="includeStyle" src="../../css/style.zul" />
+		<custom-attributes scope="request" org.zkoss.zk.desktop.nocache="true"/>
+		<h:div id="container">
+			<include src="header.zul" />
+			<style>.z-hlayout-inner { vertical-align: top;margin-left: 10px;}</style>
+			<hlayout>
+				<h:table cellpadding="2" cellspacing="0">
+					<h:tr>
+						<h:td>
+							<vlayout id="menuvlayout" spacing="10px" width="230px;">
+								<include src="commons/menu.zul" />
+							</vlayout>
+						</h:td>
+						<h:td style="vertical-align: top;" width="650px;">
+							<vlayout id="mainvlayout"  spacing="20px">
+								<vbox align="center" pack="center" width="100%" style="padding-left: 10px;padding-right: 10px;">
+									<h:div id="wrapper">
+										<h:div class="colMenu">
+											<h:h3>Invia Curriculum Vitae</h:h3>
+											<h:table>
+												<h:tr>
+													<h:td style="font-weight:bold;padding:30px;">
+																						Privacy:
+													</h:td>
+													<h:td>							
+														<checkbox id="chk_privacy"/>
+													</h:td>
+													<h:td style="font-size:12px;">
+							Dichiaro, ai sensi del GDPR 679 del 2016 e del D.lgs. n. 196 del 30 gugno 2003 e s.m.i., di essere informato/a che i dati personali raccolti saranno trattati dalla CSEA, 
+							esclusivamente nell'ambito del procedimento per il quale la presente dichiarazione viene resa, per lo svolgimento delle sue funzioni istituzionali e nei limiti di legge.
+													</h:td>
+												</h:tr>
+												<h:tr>
+													<h:td style="font-weight:bold;padding:30px;">
+																						Lingua:
+													</h:td>
+													<h:td>
+														<checkbox id="chk_lingua"/>
+													</h:td>
+													
+													<h:td style="font-size:12px;">
+							Dichiaro di avere padronanza della lingua italiana
+													</h:td>
+												</h:tr>
+												<h:tr>	
+													<h:td/>
+													<h:td/>
+													<h:td>
+														<button label="Anteprima Curriculum Vitae" id = "btn_cv_pdf_ante" image="../../icons/32x32/PDF.png">
+															<attribute name="onClick">{
+    							}</attribute>
+														</button>
+															<separator/><separator/><separator/>
+													</h:td>
+												</h:tr>
+												<h:tr>
+													<h:td/>
+													<h:td/>
+													<h:td>
+														<separator orient="vertical"></separator>
+														<separator orient="vertical"></separator>
+														<button label="Genera pdf curriculum" id="btn_invia" image="../../icons/32x32/page_save.png"/>
+														<button label="Curriculum Vitae" id = "btn_cv_pdf" image="../../icons/32x32/PDF.png" />
+													</h:td>
+												</h:tr>	
+
+											</h:table>
+										<separator/><separator/><separator/><separator/>
+												<separator bar="true"></separator>
+												
+											<h:table cellpadding="2" cellspacing="1">
+												<h:tr>
+											
+													<h:td style="width: 600px;">
+														<h:span style="font-weight:bold;font-size: 1.4em;">Attenzione:</h:span>
+														<separator />
+														<h:span style="font-size: 1.0em;">
+							Verificare i dati inseriti nel pdf in bozza. Selezionando il tasto "genera pdf curriculum" non sara' piu' possibile modificare il CV e sara' automaticamente generato ai fini dell'apposizione della firma digitale (o in formato autografo corredata di un documento di riconoscimento in corso di validita'). Una volta apposta la firma, il file (p7m o pdf, se in firma autografata) va caricato nell'apposita sezione.
+							Dopo aver verificato il corretto caricamento del file 'e possibile convalidare la candidatura premendo il tasto "trasmetti candidatura". 
+
+														</h:span>
+													</h:td>
+												</h:tr>
+											</h:table>			
+											<separator />
+										</h:div>
+									</h:div>
+								</vbox>
+							</vlayout>
+
+						</h:td>
+					</h:tr>
+				</h:table>
+			</hlayout>
+			<include src="footer.zul" />
+		</h:div>
+	</window>
+</zk>

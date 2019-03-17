@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC  "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<!-- <property name="connection.url">jdbc:mysql://192.168.3.170:3306/bandi_esperti?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true</property> -->
+		<property name="connection.url">jdbc:mysql://localhost:3306/elenco_esperti?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">password</property>
+		<property name="connection.autoReconnect">true</property>
+		<property name="connection.autoReconnectForPools">true</property>
+		<property name="connection.is-connection-validation-required">true</property>
+		<property name="hibernate.connection.release_mode">after_statement</property>
+        <property name="hibernate.transaction.auto_close_session">false</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		<property name="hibernate.default_catalog">elenco_esperti</property>
+		<!-- configuration pool via c3p0--> 
+		<property name="hibernate.c3p0.acquire_increment">1</property>
+		<property name="hibernate.c3p0.idle_test_period">50</property>
+		<property name="hibernate.c3p0.preferredTestQuery">select 1;</property>
+		<property name="hibernate.c3p0.max_statements">200</property>
+		<property name="hibernate.c3p0.timeout">1800</property>
+		<property name="hibernate.c3p0.testConnectionOnCheckout">true</property>
+		<!-- JDBC connection pool (use the built-in) -->
+		<!-- <property name="connection.pool_size">1</property-->
+        <property name="hibernate.c3p0.min_size">7</property>
+        <property name="hibernate.c3p0.max_size">53</property>
+        <property name="hibernate.c3p0.timeout">100</property>
+        <property name="hibernate.c3p0.idle_test_period">1000</property>
+        <property name="hibernate.c3p0.validate">true</property>
+        <property name="hibernate.c3p0.privilegeSpawnedThreads">true</property>
+		<property name="hibernate.c3p0.contextClassLoaderSource">library</property>
+		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Second Level Cache -->
+<!-- 
+		<property name="hibernate.cache.provider_class">net.sf.ehcache.hibernate.SingletonEhCacheProvider</property>
+		<property name="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.SingletonEhCacheRegionFactory</property>
+		<property name="hibernate.cache.provider_configuration_file_resource_path">ehcache.xml</property>-->
+		<property name="hibernate.cache.use_second_level_cache">false</property>
+	<!--	<property name="hibernate.cache.use_query_cache">true</property>
+		<property name="hibernate.generate_statistics">false</property>
+ -->
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.format_sql">false</property>
+		<property name="hibernate.use_sql_comments">false</property>
+		<!-- Drop and re-create the database schema on startup -->
+		<!-- property name="hbm2ddl.auto">update</property -->
+
+		<mapping class="it.ccse.bandiEsperti.business.model.Associazioni" />
+		<mapping class="it.ccse.bandiEsperti.business.model.DocumentoAllegatoEsperto" />
+		<mapping class="it.ccse.bandiEsperti.business.model.CartaIdentitaEsperto"/>
+		<mapping class="it.ccse.bandiEsperti.business.model.Competenza" />
+		<mapping class="it.ccse.bandiEsperti.business.model.InfoEspertoApprovato" />
+		<mapping class="it.ccse.bandiEsperti.business.model.EsperienzaLavorativa" />
+		<mapping class="it.ccse.bandiEsperti.business.model.Esperto" />
+		<mapping class="it.ccse.bandiEsperti.business.model.Istruzione" />
+		<mapping class="it.ccse.bandiEsperti.business.model.PrecedenteIncarico" />
+		<mapping class="it.ccse.bandiEsperti.business.model.Pubblicazione" />
+		<mapping class="it.ccse.bandiEsperti.business.model.AllegatoPubblEsperto" />
+		<mapping class="it.ccse.bandiEsperti.business.model.Paesi" />
+		<mapping class="it.ccse.bandiEsperti.business.model.Citta" />
+		<mapping class="it.ccse.bandiEsperti.business.model.Regioni" />
+		<mapping class="it.ccse.bandiEsperti.business.model.Provincie" />
+		<mapping class="it.ccse.bandiEsperti.business.model.Atenei" />
+		<mapping class="it.ccse.bandiEsperti.business.model.TipoLaurea" />
+		<mapping class="it.ccse.bandiEsperti.business.model.TitoloLaurea" />
+		<mapping class="it.ccse.bandiEsperti.business.model.Professione" />
+		<mapping class="it.ccse.bandiEsperti.business.model.TipoProfessione" />
+		<mapping class="it.ccse.bandiEsperti.business.model.DatoreDiLavoro" />
+		<mapping class="it.ccse.bandiEsperti.business.model.Delibera" />
+		<mapping class="it.ccse.bandiEsperti.business.model.CampiRicerca" />
+		<mapping class="it.ccse.bandiEsperti.business.model.AssCampiOperatori" />
+		<mapping class="it.ccse.bandiEsperti.business.model.Specializzazione" />
+		<mapping class="it.ccse.bandiEsperti.business.model.Tema" />
+		<mapping class="it.ccse.bandiEsperti.business.model.OperatoriRicerca" />
+		<mapping class="it.ccse.bandiEsperti.business.model.CondizioniRicerca" />
+		
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,44 @@
+
+<zk xmlns:h="http://www.w3.org/1999/xhtml">
+
+	<h:div id="wrappermenu">
+		<h:div id="colMenu">
+			<h:h3></h:h3>
+			<h:a href="../BandiEspertiPages/welcomePage.zul">
+				<h:h3>HOME</h:h3>
+			</h:a>
+			<h:ul id="MenuCentro">
+				<h:li>
+					<h:a href="listaEsperti.zul" id="ButListaEsperti"></h:a>
+				</h:li>
+				<h:li>
+					<h:a href="datoriDiLavoro.zul" id="ButDatoriDiLavoro"></h:a>
+				</h:li>
+				<h:li>
+					<h:a href="delibere.zul" id="ButDelibere"></h:a>
+				</h:li>
+				<h:li>
+					<h:a href="titoliDiStudio.zul" id="ButTitoliDiStudio"></h:a>
+				</h:li>
+				<h:li>
+					<h:a href="atenei.zul" id="ButAtenei"></h:a>
+				</h:li>
+				<h:li>
+					<h:a href="settori.zul" id="ButSettori"></h:a>
+				</h:li>
+				<h:li>
+					<h:a href="competenzeSpecifiche.zul" id="ButCompetenzeSpecifiche"></h:a>
+				</h:li>
+			
+				<h:li>
+					<h:a href="ricerca.zul" id="ButRicercaAdmin"></h:a>
+				</h:li>
+				<h:li>
+					<h:a href="associazioni.zul" id="ButAssociazioni"></h:a>
+				</h:li>
+				
+			</h:ul>
+			<separator />
+		</h:div>
+	</h:div>
+</zk>

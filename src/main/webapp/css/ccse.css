@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+
+.header_box {
+	float: left;
+	margin-left: 2%;
+	height: 80%
+}
+
+.container_center_box {
+	margin-top: 2px; 
+}
+
+.center_box {
+	float: left;
+	margin-top: 10px;
+	margin-right: 2%;
+}

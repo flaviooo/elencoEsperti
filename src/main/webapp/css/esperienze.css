@@ -1,0 +1,951 @@
+@charset "utf-8";
+
+/* CSS Document */ /* colors
+blue:#0075bf;
+orange:#e39600;
+light gray:#838383;
+dark grey:#333;
+green:#338d4d;
+*/ /* html tag definition*/
+html,body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 76% tahoma, arial, sans-serif;
+	text-align: center;
+	background: #fff url(../img/pageBg.jpg) repeat-y 50% 0;
+	color: #333;
+}
+
+a,a:visited {
+	color: #0075bf;
+}
+
+a:hover {
+	color: #e39600;
+}
+
+img {
+	border: 0;
+}
+
+p {
+	font-size: 10pt;
+	line-height: 1.2em;
+	text-align: justify;
+	padding: 5px 10px;
+}
+
+/* layout definition */
+div#header {
+	position: relative;
+	margin: 0px 10px 5px 10px;
+	background: #fff url(../img/headerBg.jpg) no-repeat 273px 0;
+}
+
+div#container {
+	text-align: left;
+	width: 916px;
+	margin: 0 auto;
+}
+
+div#wrapper {
+	float: left;
+	width: 100%;
+}
+
+div#colCentro {
+	height: 660px;
+	margin: 0 200px;
+	padding: 10px;
+	/*width: 660px;*/
+}
+
+div#colDx {
+	float: left;
+	width: 267px;
+	height: 530px;
+	margin-left: -277px;
+}
+h3{
+color: #0075BF;
+}
+div#colSx {
+	float: left;
+	width: 267px;
+	height: 530px;
+	margin-left: -906px;
+}
+
+div#logo {
+	margin: 0 0 5px 0;
+	padding-top: 15px;
+	height: 120px;
+}
+
+div#BarraTop {
+	height: 50px;
+	background: #fff url(../img/TopBarBg.png) repeat-x 0 0;
+	margin: 0px 10px 0px 10px;
+	padding: 0;
+	color: #838383;
+	font-weight: bold;
+}
+
+/* Menu Istituzionale */
+ul#MenuIstituzionale {
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+
+ul#MenuIstituzionale li {
+	display: inline;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul#MenuIstituzionale li span {
+	display: none;
+}
+
+ul#MenuIstituzionale li a {
+	height: 50px;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.ButHome,ButHome:visited {
+	background: url(../img/butHome.png);
+	width: 85px;
+}
+
+.ButHome:hover {
+	background-position: 0 100%;
+}
+
+.ButChiSiamo,ButChiSiamo:visited {
+	background: url(../img/butChiSiamo.png);
+	width: 87px;
+}
+
+.ButChiSiamo:hover {
+	background-position: 0 100%;
+}
+
+.ButMission,ButMission:visited {
+	background: url(../img/butMission.png);
+	width: 86px;
+}
+
+.ButMission:hover {
+	background-position: 0 100%;
+}
+
+.ButModalita,ButModalita:visited {
+	background: url(../img/butModalitaOperative.png);
+	width: 159px;
+}
+
+.ButModalita:hover {
+	background-position: 0 100%;
+}
+
+.ButNewsletter,ButNewsletter:visited {
+	background: url(../img/butNewsletter.png);
+	width: 101px;
+}
+
+.ButNewsletter:hover {
+	background-position: 0 100%;
+}
+
+.ButContatti,ButContatti:visited {
+	background: url(../img/butContatti.png);
+	width: 78px;
+}
+
+.ButContatti:hover {
+	background-position: 0 100%;
+}
+
+/* form ricerca */
+div#ricerca {
+	float: right;
+	height: 20px;
+	margin: 10px 5px 0 0;
+	padding: 0;
+	background: #fff;
+	border: 1px solid #9b9c9d;
+}
+
+.search {
+	height: 1.1em;
+	font-size: 10pt;
+	vertical-align: middle;
+	color: #888;
+	float: left;
+	border: none;
+}
+
+.cerca {
+	padding: 0;
+	margin: 0;
+}
+
+/* form area riservata */
+div#colDx form {
+	margin: 0;
+}
+
+div#areaRiservata {
+	background: #fff url(../img/bgAreaRiservata.png) no-repeat 10px 100%;
+	margin: 5px 0;
+	font-size: 8pt;
+}
+
+div#areaRiservata table {
+	width: 254px;
+	height: 85px;
+	margin: 0 0 0 12px;
+	border: 0;
+}
+
+div#areaRiservata .texin {
+	background: #fff;
+	height: 1.2em;
+	border: 1px solid #ddd;
+	vertical-align: middle;
+	color: #888;
+	margin: 0;
+}
+
+div#areaRiservata tr {
+	color: #0075bf;
+	height: 25px;
+	margin: 0;
+}
+
+div#areaRiservata td {
+	padding-left: 10px;
+}
+
+/* menu SX */
+ul#MenuSx {
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+
+ul#MenuSx li {
+	display: inline;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+
+ul#MenuSx li span {
+	display: none;
+}
+
+ul#MenuSx li a {
+	width: 128px;
+	height: 103px;
+	text-decoration: none;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+#ButBigRicerca,#ButBigRicerca:visited {
+	background: url(../img/butBigRicercaSistema.png);
+}
+
+#ButBigRicerca:hover {
+	background-position: 0 100%;
+}
+
+#ButBigAliquoteElet,#ButBigAliquoteElet:visited {
+	background: url(../img/butBigAliquoteElettricita.png);
+}
+
+#ButBigAliquoteElet:hover {
+	background-position: 0 100%;
+}
+
+#ButBigAliquoteGas,#ButBigAliquoteGas:visited {
+	background: url(../img/butBigAliquoteGas.png);
+}
+
+#ButBigAliquoteGas:hover {
+	background-position: 0 100%;
+}
+
+#ButBigBonus,#ButBigBonus:visited {
+	background: url(../img/butBigBonus.png);
+}
+
+#ButBigBonus:hover {
+	background-position: 0 100%;
+}
+
+#ButBigProgetti,#ButBigProgetti:visited {
+	background: url(../img/ButBigProgettiConsumatori.png);
+}
+
+#ButBigProgetti:hover {
+	background-position: 0 100%;
+}
+
+#ButBigCircolari,#ButBigCircolari:visited {
+	background: url(../img/butBigCircolari.png);
+}
+
+#ButBigCircolari:hover {
+	background-position: 0 100%;
+}
+
+/* menu DX */
+ul#menuDx {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul#menuDx li {
+	width: 266px;
+	margin: 10px 0;
+	padding: 0;
+}
+
+/*ul#menuDx li span {
+	display: none;
+}*/
+ul#menuDx li a {
+	height: 32px;
+	text-decoration: none;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	display: block;
+}
+
+#ButNews,#ButNews:visited {
+	background: url(../img/butDxNews.png);
+	padding: 0;
+	margin: 1px 0;
+}
+
+#ButNews:hover {
+	background-position: 0 100%;
+}
+
+#ButAvvisi,#ButAvvisi:visited {
+	background: url(../img/butDxAvvisi.png);
+	padding: 0;
+	margin: 1px 0;
+}
+
+#ButAvvisi:hover {
+	background-position: 0 100%;
+}
+
+#ButBandi,#ButBandi:visited {
+	background: url(../img/butDxBandi.png);
+	padding: 0;
+}
+
+#ButBandi:hover {
+	background-position: 0 100%;
+}
+
+.NewsDx {
+	height: 100px;
+}
+
+.AvvisiDx {
+	height: 210px;
+}
+
+.NewsDx {
+	background: #fff url(../img/bgNews.png) no-repeat 13px 100%;
+}
+
+.AvvisiDx {
+	background: #fff url(../img/bgAvvisi.png) no-repeat 13px 100%;
+}
+
+ul li #News a,ul li #Avvisi a {
+	line-height: 1.2em;
+	font-size: 8pt;
+	text-decoration: none;
+	margin: 1px 0 1px 20px;
+}
+
+ul li #News a,ul li #News a:visited {
+	color: #fff;
+}
+
+/* menu Centro */
+ul#MenuCentro {
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+
+ul#MenuCentro li {
+	width: 352px;
+	list-style: none;
+	padding: 0 0 5px 0;
+	margin: 0;
+}
+
+/*ul#MenuCentro li span {
+	display: none;
+}*/
+ul#MenuCentro li a {
+	height: 32px;
+	text-decoration: none;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	margin: 5px 0;
+	display: block;
+}
+
+#ButSetElettrico,#ButSetElettrico:visited {
+	background: url(../img/butCentroElettricita.png);
+	padding: 0;
+}
+
+#ButSetElettrico:hover {
+	background-position: 0 100%;
+}
+
+#ButRegistrazione,#ButRegistrazione:visited {
+	background: url(../images/registrazione.png);
+	width: 265px;
+	padding: 0;
+}
+
+#ButRegolamenti:hover {
+	background-position: 0 100%;
+	padding: 0;
+}
+
+#ButPrezzi,#ButPrezzi:visited {
+	background: url(../img/butDatiAnagrafici.png);
+	width: 225px;
+	padding: 0;
+}
+
+#ButPrezzi:hover {
+	background-position: 0 100%;
+	padding: 0;
+}
+
+#ButNormativa/*,#ButNormativa:visited*/ {
+	background: url(../img/butIstruzione.png);
+	padding: 0;
+}
+#ButCompetenze/*,#ButNormativa:visited*/ {
+	background: url(../img/butCompetenze.png);
+	padding: 0;
+}
+#ButPubblicazioni/*,#ButNormativa:visited*/ {
+	background: url(../img/butPubblicazioni.png);
+	padding: 0;
+}
+#ButEsperienze/*,#ButNormativa:visited*/ {
+	background: url(../img/butEsperienze.png);
+	padding: 0;
+}
+
+#ButCarriera/*,#ButNormativa:visited*/ {
+	background: url(../img/butCarriera.png);
+	padding: 0;
+}
+
+
+#ButNormativa:hover {
+	background-position: 0 100%;
+	padding: 0;
+}
+
+#ButSetGas,#ButSetGas:visited {
+	background: url(../img/butCentroGas.png);
+	padding: 0;
+}
+
+#ButSetGas:hover {
+	background-position: 0 100%;
+	padding: 0;
+}
+
+#ButRicerca/*,#ButRicerca:visited*/ {
+	background: url(../img/butIncarichi.png);
+	padding: 0;
+}
+
+#ButRicerca:hover {
+	background-position: 0 100%;
+}
+
+.NewsCentro {
+	height: 125px;
+	color: #0075bf;
+	background: #fff url(../img/bgNewsCentro.png) no-repeat 10px 100%;
+}
+
+ul li #NewsElettrico a,ul li #NewsGas a {
+	font-size: 8pt;
+	text-decoration: none;
+	margin: 5px 0 5px 20px;
+}
+
+.dataNews {
+	font-size: 7pt;
+	color: #838383;
+	text-align: right;
+	padding: 15px 0 5px 5px;
+	margin-right: 10px;
+}
+
+.dataNewsWhite {
+	font-size: 7pt;
+	color: #fff;
+	text-align: right;
+	padding: 15px 0 5px 5px;
+	margin-right: 10px;
+}
+
+/* grafici laterali*/
+.graficoSide h1 {
+	color: #0075bf;
+	background: #fff;
+	padding: 2px;
+	border-bottom: #0075bf 1px solid;
+	margin: 5px 10px;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+/* footer */
+div#footer {
+	clear: left;
+	width: 876px;
+	color: #0075bf;
+	background: #fff url(../img/footerBg.png) repeat-x;
+	height: 20px;
+	margin: 10px;
+	padding: 5px 10px;
+	font-size: 11px;
+	text-align: center;
+}
+
+div#footer a {
+	font-weight: bold;
+	 float: left;
+	
+}
+
+/* Pagine Interne */
+div#wrapperGreen {
+	float: left;
+	width: 100%;
+	/*background: #fff url(../img/bgPageIntGreen.png) no-repeat 10px 100%;*/
+}
+
+div#wrapperBlue {
+	float: left;
+	width: 100%;
+	/*background: #fff url(../img/bgPageIntBlue.png) no-repeat 10px 100%;*/
+}
+
+div#wrapperOrange {
+	float: left;
+	width: 100%;
+	/*background: #fff url(../img/bgPageIntOrange.png) no-repeat 10px 100%;*/
+}
+
+div#wrapperGrey {
+	float: left;
+	width: 100%;
+	/*background: #fff url(../img/bgPageIntGrey.png) no-repeat 10px 100%;*/
+}
+
+div#ContenutoGreen,div#ContenutoBlue,div#ContenutoOrange,div#ContenutoGrey
+	{
+	margin: 0 10px 0 282px;
+	padding: 0 0 10px 0;
+}
+
+/* titoli*/
+div#ContenutoGreen h1,div#ContenutoBlue h1,div#ContenutoOrange h1,div#ContenutoGrey h1
+	{
+	font-size: 11pt;
+	padding: 2px 2px 4px 15px;
+	margin: 5px 0;
+}
+
+div#ContenutoGreen h1 {
+	color: #338d4d;
+	background: #fff url(../img/h1green.png) repeat-y;
+}
+
+div#ContenutoBlue h1 {
+	color: #0075bf;
+	background: #fff url(../img/h1blue.png) repeat-y;
+}
+
+div#ContenutoOrange h1 {
+	color: #c38100;
+	background: #fff url(../img/h1orange.png) repeat-y;
+}
+
+div#ContenutoGrey h1 {
+	color: #838383;
+	background: #fff url(../img/h1grey.png) repeat-y;
+}
+
+/* Menu */
+ul.MenuIntGreen,ul.MenuIntBlue,ul.MenuIntOrange,ul.MenuIntGrey {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background: #fff;
+}
+
+ul.MenuIntGreen li,ul.MenuIntBlue li,ul.MenuIntOrange li,ul.MenuIntGrey li
+	{
+	width: 267px;
+	margin: 5px 0;
+}
+
+ul.MenuIntGreen li a,ul.MenuIntBlue li a,ul.MenuIntOrange li a,ul.MenuIntGrey li a
+	{
+	width: 247px;
+	height: 22px;
+	display: block;
+	line-height: 22px;
+	padding-left: 20px;
+	font-size: 10pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+ul.MenuIntGreen li a,ul.MenuIntGreen li a:visited {
+	background: #fff url('../img/ButtonGreenShort.png') no-repeat 0 0;
+}
+
+ul.MenuIntBlue li a,ul.MenuIntBlue li a:visited {
+	background: #fff url('../img/ButtonBlueShort.png') no-repeat 0 0;
+}
+
+ul.MenuIntOrange li a,ul.MenuIntOrange li a:visited {
+	background: #fff url('../img/ButtonOrangeShort.png') no-repeat 0 0;
+}
+
+ul.MenuIntGrey li a,ul.MenuIntGrey li a:visited {
+	background: #fff url('../img/ButtonGreyShort.png') no-repeat 0 0;
+}
+
+ul.MenuIntGreen li a:hover,ul.MenuIntBlue li a:hover,ul.MenuIntOrange li a:hover,ul.MenuIntGrey li a:hover
+	{
+	background-position: 0 -22px;
+}
+
+/* SUBMenu */
+ul.SubMenuGreen,ul.SubMenuBlue,ul.SubMenuOrange,ul.SubMenuGrey {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.SubMenuGreen li,ul.SubMenuBlue li,ul.SubMenuOrange li,ul.SubMenuGrey li
+	{
+	margin: 5px 0;
+}
+
+ul.SubMenuGreen li a,ul.SubMenuBlue li a,ul.SubMenuOrange li a,ul.SubMenuGrey li a
+	{
+	width: 247px;
+	height: 22px;
+	display: block;
+	line-height: 22px;
+	padding-left: 25px;
+	font-size: 8pt;
+	font-weight: bold;
+	text-decoration: none;
+	color: #838383;
+}
+
+ul.SubMenuGreen li a,ul.SubMenuGreen li a:visited {
+	background: #fff url('../img/ButtonGreenSub.png') no-repeat 0 0;
+}
+
+ul.SubMenuBlue li a,ul.SubMenuBlue li a:visited {
+	background: #fff url('../img/ButtonBlueSub.png') no-repeat 0 0;
+}
+
+ul.SubMenuOrange li a,ul.SubMenuOrange li a:visited {
+	background: #fff url('../img/ButtonOrangeSub.png') no-repeat 0 0;
+}
+
+ul.SubMenuGrey li a,ul.SubMenuGrey li a:visited {
+	background: #fff url('../img/ButtonGreySub.png') no-repeat 0 0;
+}
+
+ul.SubMenuGreen li a:hover,ul.SubMenuBlue li a:hover,ul.SubMenuOrange li a:hover,ul.SubMenuGrey li a:hover
+	{
+	background-position: 0 -22px;
+}
+
+ul.SubMenuGreen li a.marked,ul.SubMenuBlue li a.marked,ul.SubMenuOrange li a.marked,ul.SubMenuGrey li a.marked
+	{
+	background-position: 0 -22px;
+	color: #333;
+}
+
+.z-shadow .z-shadow-cl {
+	background: none;
+}
+
+div#Breadcrumb {
+	background: #fff url(../images/navBarBg.png) no-repeat 0 0;
+	height: 21px;
+	padding: 3px 2px 4px 15px;
+	color: #838383;
+	font-size: 8pt;
+}
+
+.scroller_container {
+	position: relative;
+	width: 98%;
+	height: 115px;
+	overflow: hidden;
+}
+
+.scroller_container_news {
+	position: relative;
+	width: 98%;
+	height: 95px;
+	overflow: hidden;
+}
+
+.scroller_container_avvisi {
+	position: relative;
+	width: 98%;
+	height: 205px;
+	overflow: hidden;
+}
+
+.scroller p {
+	padding: 0px 0px 10px;
+}
+
+#dummy {; #
+	
+}
+
+.z-fieldset legend {
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.rotation_docs_title {
+	font: 80% arial, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+}
+
+.rotation_docs_desc {
+	font: 80% arial, sans-serif;
+	font-size: 9pt;
+}
+
+.rotation_news_title {
+	font: 80% arial, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.rotation_news_desc {
+	font: 80% arial, sans-serif;
+	font-size: 9pt;
+	color: #FFFFFF;
+}
+
+.rotation_avvisi_title {
+	font: 80% arial, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #0075BF;
+}
+
+.rotation_avvisi_desc {
+	font: 80% arial, sans-serif;
+	font-size: 9pt;
+	color: #0075BF;
+}
+
+.scroller_div {
+	margin: 5px 0 0px 20px;
+	text-align: justify;
+}
+
+.rotation_container {
+	margin-bottom: 20px;
+}
+div#registrazione {
+	background: #fff url(../img/bgregistrazione.png) no-repeat 10px 100%;
+	margin: 5px 0;
+	font-size: 8pt;
+}
+
+div#registrazione table {
+	width: 354px;
+	height: 85px;
+	margin: 0 0 0 12px;
+	border: 0;
+}
+
+div#registrazione .texin {
+	background: #fff;
+	height: 1.2em;
+	border: 1px solid #ddd;
+	vertical-align: middle;
+	color: #888;
+	margin: 0;
+}
+
+div#registrazione tr {
+	color: #0075bf;
+	height: 25px;
+	margin: 0;
+}
+
+div#registrazione td {
+	padding-left: 10px;
+}
+
+
+#ButDatoriDiLavoro,#ButDatoriDiLavoro:visited {
+	background: url(/ElencoEsperti/img/butDatoriDiLavoro.png);
+	width: 225px;
+	padding: 0;
+}
+
+#ButDatoriDiLavoro:hover {
+	background-position: 0 100%;
+	padding: 0;
+}
+
+
+#ButDelibere,#ButDelibere:visited {
+	background: url(/ElencoEsperti/img/butDelibere.png);
+	width: 225px;
+	padding: 0;
+}
+
+#ButDelibere:hover {
+	background-position: 0 100%;
+	padding: 0;
+}
+
+#ButTitoliDiStudio,#ButTitoliDiStudio:visited {
+	background: url(/ElencoEsperti/img/butTitoliDiStudio.png);
+	width: 225px;
+	padding: 0;
+}
+
+#ButTitoliDiStudio:hover {
+	background-position: 0 100%;
+	padding: 0;
+}
+
+
+#ButAtenei,#ButAtenei:visited {
+	background: url(/ElencoEsperti/img/butAtenei.png);
+	width: 225px;
+	padding: 0;
+}
+
+
+#ButAtenei:hover {
+	background-position: 0 100%;
+	padding: 0;
+}
+
+
+#ButSettori,#ButSettori:visited {
+	background: url(/ElencoEsperti/img/butSettori.png);
+	width: 225px;
+	padding: 0;
+}
+
+
+#ButSettori:hover {
+	background-position: 0 100%;
+	padding: 0;
+}
+
+#ButCompetenzeSpecifiche,#ButCompetenzeSpecifiche:visited {
+	background: url(/ElencoEsperti/img/butCompetenzeSpecifiche.png);
+	width: 225px;
+	padding: 0;
+}
+
+
+#ButCompetenzeSpecifiche:hover {
+	background-position: 0 100%;
+	padding: 0;
+}
+
+#ButRicercaAdmin,#ButRicercaAdmin:visited {
+	background: url(/ElencoEsperti/img/butRicerca.png);
+	width: 225px;
+	padding: 0;
+}
+
+
+#ButRicercaAdmin:hover {
+	background-position: 0 100%;
+	padding: 0;
+}
+
+
+#ButAssociazioni,#ButAssociazioni:visited {
+	background: url(/ElencoEsperti/img/butAssociazioni.png);
+	width: 225px;
+	padding: 0;
+}
+
+
+#ButAssociazioni:hover {
+	background-position: 0 100%;
+	padding: 0;
+}
+
+}
+
+#ButListaEsperti,#ButListaEsperti:visited {
+	background: url(/ElencoEsperti/img/butListaEsperti.png);
+	width: 225px;
+	padding: 0;
+}
+
+
+#ButListaEsperti:hover {
+	background-position: 0 100%;
+	padding: 0;
+}
