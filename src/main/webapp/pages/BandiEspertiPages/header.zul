@@ -1,0 +1,24 @@
+<div apply="it.ccse.bandiEsperti.zk.composers.Header"  id="win_header" xmlns:h="http://www.w3.org/1999/xhtml">
+	
+	<h:div id="header">
+		<h:div id="logo" >
+			<h:a href="../BandiEspertiPages/welcomePage.zul">
+				<image src="../../img/ccse_logo.png" />
+			</h:a>
+		</h:div>
+ 		<h:div id="menuTop">
+			<h:table>
+				<h:tr>
+					<h:td>
+						<label id="lbl_logged" value="Not Logged"
+						 style="font:100% tahoma,arial,sans-serif;font-size:10pt;padding-right:10px" />
+					</h:td>
+					<h:td style="text-align:right; padding-right:10px">
+						<h:input name="entraa" type="image"	src="../../img/entra.png" id="entraa" />
+						<h:input name="escia" type="image"	src="../../img/esci.png" id="escia" />
+					</h:td>	
+				</h:tr>
+			</h:table>
+		</h:div>
+	</h:div>
+</div>

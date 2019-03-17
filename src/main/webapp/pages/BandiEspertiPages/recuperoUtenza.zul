@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Elenco Esperti" contentType="text/html;charset=UTF-8"?>
+<?meta http-equiv="X-UA-Compatible" content="IE=7,8,9" ?>
+<?link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"?>
+<zk xmlns:h="http://www.w3.org/1999/xhtml">
+<window border="none" id="win_recupero_utente" 
+apply="it.ccse.bandiEsperti.zk.composers.RecuperoUtenteComposer"
+style="font:80% tahoma,arial,sans-serif;font-size:8pt;"
+		zclass="ContenutoGrey" xmlns:w="client" >
+		<include id="includeStyle" src="../../css/style.zul" />
+				<h:div id="container">
+			<include src="header.zul" />
+		<h:div id="wrapper">
+		<h:div id="colCentro">
+		<h:h1>
+			<label id="h1_testa" zclass="ContenutoGrey h1" />
+		</h:h1>
+		<h:h3>Recupero password</h:h3>
+		<separator/>
+		<separator/>
+		<h:table  cellpadding="2" cellspacing="3">
+			<h:tr>
+				<h:td colspan="3">
+				Per proseguire, è necessario inserire la mail di registrazione:				
+				</h:td>
+			</h:tr>
+			<h:tr>
+				<h:td>Indirizzo mail:</h:td>
+				<h:td><textbox id="email" 
+				style="font:80% tahoma,arial,sans-serif;font-size:8pt;"
+					constraint="/.+@.+\.[a-z]+/: Inserire un indirizzo di posta elettronica valido"
+				width="200px" /></h:td>
+				<h:td><button label="Invio Dati" id="btn_invio" /></h:td>
+			</h:tr>
+		</h:table>
+	</h:div>
+	</h:div>
+	</h:div>
+</window>
+</zk>

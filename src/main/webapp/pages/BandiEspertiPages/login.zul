@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Elenco Esperti" contentType="text/html;charset=UTF-8"?>
+<?meta http-equiv="X-UA-Compatible" content="IE=7,8,9" ?>
+<?meta name="description" value="CSEA - Cassa per i servizi energetici e ambientali  HomePage"?>
+<?link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"?>
+<zk xmlns:h="http://www.w3.org/1999/xhtml">
+	<window border="none" apply="it.ccse.bandiEsperti.zk.composers.Login" id="win_home" xmlns:w="client">
+		<include id="includeStyle" src="../../css/style.zul" />
+		<h:div id="container">
+			<include src="headerlogin.zul" />
+			<h:div id="wrapper" >
+				<h:div id="colCentroLogin"  >
+					<separator/>
+					<h:h3>Selezione Elenco Esperti</h:h3>
+					<separator/>
+							<h:div id="areaRiservata">
+								<h:img src="../../images/login.png" alt="Area Riservata" />
+								<h:table cellpadding="2" cellspacing="3">
+									<h:tr>
+										<h:td>Codice Fiscale</h:td>
+										<h:td>
+											<textbox id="username" value="adminadmin" zclass="texin" width="92%" />
+										</h:td>
+									</h:tr>
+									<h:tr>
+										<h:td>Password</h:td>
+										<h:td>
+											<textbox id="password" value="elf789aa" zclass="texin" type="password" width="92%" />
+												<separator/><separator/>
+										</h:td>
+									</h:tr>
+									<h:tr>
+										<h:td>
+											<label id="lbl_logged" value="Not Logged"
+												style="font:80% tahoma,arial,sans-serif;font-size:10pt;" />
+										</h:td>
+										<h:td style="text-align:right; padding-right:10px">
+											<h:input name="entra" type="image" src="../../img/entra.png" id="entra" />
+											<h:input name="esci" type="image" src="../../img/esci.png" id="esci" />
+										</h:td>
+									</h:tr>
+
+								</h:table>
+							</h:div>
+				
+						<h:p></h:p>
+				
+						<h:br />
+							<h:ul id="MenuCentro">
+						<h:li>
+						
+					<h:a href="../BandiEspertiPages/registrazione.zul"><h:img src="../../icons\16x16\actions\go-next.png" /> Registrazione</h:a>
+						</h:li>
+						<h:li>
+							<h:a href="../BandiEspertiPages/recuperoUtenza.zul"><h:img src="../../icons\16x16\actions\go-next.png" /> Recupero password</h:a>
+						</h:li>
+					</h:ul>
+
+				</h:div>
+
+			</h:div>
+			<include src="footer.zul" />
+		</h:div>
+	</window>
+</zk>

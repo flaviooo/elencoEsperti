@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?meta http-equiv="X-UA-Compatible" content="IE=7,8,9" ?>
+<?link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"?>
+
+<zk xmlns:h="http://www.w3.org/1999/xhtml">
+<window title="new page title" border="normal"  xmlns:w="client"
+	apply="it.ccse.bandiEsperti.zk.composers.InfoEspertoApprComposer" >
+<div align="center">
+<h:table cellpadding="2" cellspacing="3" >
+	<h:tr valign="top">
+		<h:td align="right"><label value="Nome:" /></h:td>
+		<h:td><label id="lblNome" /></h:td>	
+	</h:tr>
+	<h:tr valign="top">
+		<h:td align="right"><label value="Cognome:" /></h:td>
+		<h:td><label id="lblCognome" /></h:td>	
+	</h:tr>
+	<h:tr valign="top">
+		<h:td align="right"><label value="Mail:" /></h:td>
+		<h:td><textbox id="txtMail" multiline="false"/></h:td>	
+	</h:tr>
+	<h:tr valign="top">
+		<h:td align="right"><label value="Telefono:" /></h:td>
+		<h:td><textbox id="txtTelefono" multiline="false"/></h:td>	
+	</h:tr>
+	<h:tr valign="top">
+		<h:td align="right"><label value="Data di nascita:" /></h:td>
+		<h:td><label id="lblDataNas" /></h:td>	
+	</h:tr>
+	<h:tr valign="top">
+		<h:td align="right"><label value="Codice Domanda:" /></h:td>
+		<h:td><label id="lblCodDom" /></h:td>	
+	</h:tr>
+	<h:tr valign="top">
+		<h:td></h:td>	
+	</h:tr>
+	<h:tr align="center">
+		<h:td colspan="2"><button label="Salva" id="btn_salva" image="/icons/16x16/actions/page_save.png" /></h:td>
+	</h:tr>
+</h:table>
+</div>
+</window>
+</zk>

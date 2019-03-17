@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?page title="Elenco Esperti" contentType="text/html;charset=UTF-8"?>
+<?meta http-equiv="X-UA-Compatible" content="IE=7,8,9" ?>
+
+<?meta name="description" value="CSEA Cassa per i servizi energetici e ambientali"?>
+<?link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"?>
+
+
+
+<?page title="Elenco Esperti" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:h="http://www.w3.org/1999/xhtml">
+<window border="none" id="win_registrazione"
+		apply="it.ccse.bandiEsperti.zk.composers.Registrazione"
+		style="font:80% tahoma,arial,sans-serif;font-size:10pt;"
+		zclass="ContenutoGrey" xmlns:w="client">
+		
+		<include id="includeStyle" src="../../css/style.zul" />
+				
+		<custom-attributes scope="request" org.zkoss.zk.desktop.nocache="true"/>
+
+		<h:div id="container">
+			<include src="header.zul" />
+		<h:div id="wrapper">
+		<h:div id="colCentro">
+		<h:h1>
+			<label id="h1_testa" zclass="ContenutoGrey h1" />
+		</h:h1>
+		<h:h3>Curriculum Vitae</h:h3>
+		<separator/>
+		<separator/>
+			<h:table cellpadding="2" cellspacing="1">
+				<h:tr>
+					<h:td style="font-weight:bold;">Codice Fiscale:<h:span style="color: red;">*</h:span></h:td>
+					<h:td>
+						<textbox id="txt_cf" width="200px"
+							style="font:80% tahoma,arial,sans-serif;font-size:8pt;" 
+							constraint="no empty: Campo obbligatorio"  
+							maxlength="16"/>
+					</h:td>
+				</h:tr>
+				<h:tr>
+					<h:td style="font-weight:bold;">Password:<h:span style="color: red;">*</h:span></h:td>
+					<h:td>
+						<textbox id="txt_password" width="200px"
+							style="font:80% tahoma,arial,sans-serif;font-size:8pt;" maxlength="16" type="password" constraint="no empty: Campo obbligatorio"/>
+					</h:td>
+				</h:tr>
+				<h:tr>
+					<h:td style="font-weight:bold;">Conferma Password:<h:span style="color: red;">*</h:span></h:td>
+					<h:td>
+						<textbox id="txt_password_confermata" maxlength="16" type="password" width="200px"
+						style="font:80% tahoma,arial,sans-serif;font-size:8pt;" constraint="no empty: Campo obbligatorio">
+						<attribute name="onChange"><![CDATA[
+                        if (!txt_password_confermata.getValue().equals(txt_password.getValue())) {
+                        	txt_password_confermata.style = "color:red";
+                        } else {
+                        	txt_password_confermata.style = "color:black";
+                        }
+                    ]]></attribute>
+                    	</textbox>
+					</h:td>
+				</h:tr>
+				<h:tr>
+					<h:td style="font-weight:bold;">Email:<h:span style="color: red;">*</h:span></h:td>
+					<h:td>
+						<textbox id="txt_email" width="200px"
+							style="font:80% tahoma,arial,sans-serif;font-size:8pt;" constraint="/.+@.+\.[a-z]+/: Inserire un indirizzo di posta elettronica valido" />
+					</h:td>
+				</h:tr>
+				
+<h:tr>
+					<h:td style="font-weight:bold;">Conferma Email:<h:span style="color: red;">*</h:span></h:td>
+					<h:td>
+						<textbox id="txt_email_confermata"  width="200px"
+						style="font:80% tahoma,arial,sans-serif;font-size:8pt;" constraint="no empty: Campo obbligatorio" >
+						<attribute name="onChange"><![CDATA[
+                        if (!txt_email_confermata.getValue().equals(txt_email.getValue())) {
+                        	txt_email_confermata.style = "color:red";
+                        } else {
+                        	txt_email_confermata.style = "color:black";
+                        }
+                    ]]></attribute>
+                    	</textbox>
+					</h:td>
+</h:tr>
+				
+				<h:tr>
+					<h:td style="font-weight:bold;">Nome:<h:span style="color: red;">*</h:span></h:td>
+					<h:td>
+						<textbox id="txt_nome" width="200px"
+							style="font:80% tahoma,arial,sans-serif;font-size:8pt;" maxlength="45" constraint="no empty: Campo obbligatorio"/>
+					</h:td>
+				</h:tr>
+				<h:tr>
+					<h:td style="font-weight:bold;">Cognome:<h:span style="color: red;">*</h:span></h:td>
+					<h:td>
+						<textbox id="txt_cognome" width="200px"
+							style="font:80% tahoma,arial,sans-serif;font-size:8pt;" maxlength="45" constraint="no empty: Campo obbligatorio"/>
+					</h:td>
+				</h:tr>
+				 <h:tr>
+					<h:td style="font-weight:bold;">Partita Iva:</h:td>
+					<h:td>
+						<textbox id="txt_pi" width="200px"
+							style="font:80% tahoma,arial,sans-serif;font-size:8pt;" maxlength="11"/>
+					</h:td>
+				</h:tr>
+				<!--
+				<h:tr>
+					<h:td style="font-weight:bold;">Telefono:<h:span style="color: red;">*</h:span></h:td>
+					<h:td>
+						<textbox id="txt_telefono" width="200px"
+							style="font:80% tahoma,arial,sans-serif;font-size:8pt;" maxlength="45" constraint="no empty"/>
+					</h:td>
+				</h:tr>
+				<h:tr>
+					<h:td style="font-weight:bold;">Cellulare:</h:td>
+					<h:td>
+						<textbox id="txt_cell" width="200px" maxlength="45"
+							style="font:80% tahoma,arial,sans-serif;font-size:8pt;" />
+					</h:td>
+				</h:tr>
+				<h:tr>
+					<h:td style="font-weight:bold;">Fax:</h:td>
+					<h:td>
+						<textbox id="txt_fax" width="200px" maxlength="45"
+							style="font:80% tahoma,arial,sans-serif;font-size:8pt;" />
+					</h:td>
+				</h:tr>
+				<h:tr>
+					<h:td style="font-weight:bold;">Residenza:<h:span style="color: red;">*</h:span></h:td>
+					<h:td>
+						<textbox id="txt_residenza"
+							style="font:80% tahoma,arial,sans-serif;font-size:8pt;" rows="3"
+							width="350px" maxlength="300" constraint="no empty"/>
+					</h:td>
+				</h:tr>
+				<h:tr>
+					<h:td style="font-weight:bold;">Indirizzo per comunicazioni se <h:br/>differente da residenza:</h:td>
+					<h:td>
+						<textbox id="txt_domicilio"
+							style="font:80% tahoma,arial,sans-serif;font-size:8pt;" rows="3"
+							width="350px" maxlength="300" />
+					</h:td> 
+				</h:tr>
+				<h:tr>
+					<h:td style="font-weight:bold;">Data di nascita:<h:span style="color: red;">*</h:span></h:td>
+					<h:td>
+						<datebox id="dta_data_nascita" width="200px" constraint="between 19300101 and 19940101, no empty: inserire una data valida"/> 
+					</h:td>
+				</h:tr>
+				 -->
+				<h:tr>
+			
+				<h:td></h:td>
+					<h:td>
+					<separator/><separator/><separator/>
+						<button id="btn_salva" label=" Salva" image="../../icons/32x32/page_save.png"/>
+					</h:td>
+				</h:tr>
+			</h:table>
+							<separator />
+							<separator />	
+							<separator />	
+							<h:table cellpadding="2" cellspacing="0">
+								<h:tr>
+									<h:td style="font-weight:bold;"><h:span style="color: red;">*</h:span> Obbligatorio</h:td>
+									<h:td>
+									</h:td>
+								</h:tr>								
+							</h:table>							
+							<separator />
+							<separator />
+			</h:div>
+		</h:div>
+		<include src="footer.zul" />
+		</h:div>
+	</window>
+</zk>
