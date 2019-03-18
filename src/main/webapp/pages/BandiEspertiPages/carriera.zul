@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?meta http-equiv="X-UA-Compatible" content="IE=7,8,9" ?>
+<?meta name="description" value="CSEA Cassa per i servizi energetici e ambientali"?>
+<?link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"?>
+<?page title="Elenco Esperti" contentType="text/html;charset=UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" arg0="./win_carriera"?>
+<zk xmlns:h="http://www.w3.org/1999/xhtml" xmlns:c="client">
+	<window border="none" id="win_carriera" apply="it.ccse.bandiEsperti.zk.composers.CarrieraComposer"
+		style="font:80% tahoma,arial,sans-serif;font-size:8pt;" zclass="ContenutoGrey" xmlns:w="client">
+		
+		<include id="includeStyle" src="../../css/style.zul" />
+		
+		<custom-attributes scope="request" org.zkoss.zk.desktop.nocache="true" />
+
+		<h:div id="container">
+			<style>.z-hlayout-inner { vertical-align: top; }</style>
+			<include src="header.zul" />
+
+			<hlayout>
+				<h:table cellpadding="2" cellspacing="0">
+				<h:tr>
+				<h:td>
+					<vlayout id="menuvlayout" spacing="10px" width="230px;">
+						<include src="commons/menu.zul" />
+					</vlayout>
+				</h:td>
+				<h:td style="vertical-align: top;">
+
+				<vlayout id="mainvlayout" spacing="10px">
+					<h:div id="wrapper">
+						<h:div class="colMenu">
+							<h:h1>
+								<label id="h1_testa" zclass="ContenutoGrey h1" />
+							</h:h1>
+						<h:h3>Curriculum Vitae: Carriera Principale</h:h3>
+							<separator />
+
+							<style>
+								.text-center, .z-combobox-inp, .z-datebox-inp { text-align: center; } div.z-grid-body {
+								#overflow: hidden; } div.z-column-cnt { padding: 7px 0 5px 5px; } tr.z-row
+								td.z-row-inner,div.z-row-cnt { padding: 0 2px; }
+							</style>
+							<h:div>
+										Presentazione candidato (max 3000 caratteri):
+										<textbox id="txt_presentazione" width="595px"
+											style="font:80% tahoma,arial,sans-serif;font-size:8pt;"
+											value="@{win_carriera$CarrieraComposer.presentazione,save-when='none'}"
+											maxlength="3000" rows="3" />
+							
+							</h:div>
+							<separator />
+							<separator />
+								<button  id="bnt_salva_presentazione" label="Salva Presentazione" mold="os"
+											image="../../icons/16x16/actions/page_save.png" />
+							
+							<separator />
+							<separator />
+							<!--   <grid width="600px"  id="inboxGrid" rowRenderer="it.ccse.bandiEsperti.zk.rowRenderer.IstruzioneRowRenderer" > -->
+						<grid width="650px" id="inboxGrid"
+								model="@{win_carriera$CarrieraComposer.listaEsperienze}">
+								<columns height="22px">
+									<column sort="auto(dataInizio)" width="90px" label="Anno di inizio" ></column>
+									<column width="90px" label="Anno di fine"></column>
+									<!-- <column width="60px" label="In Corso"></column> -->
+									<column width="180px" label="Attuale posizione lavorativa"></column>
+									<column width="150px" label="Tipo Professione"></column>
+									<column width="190px" label="Professione"></column>
+									<column width="200px" label="Datore di Lavoro"></column>
+									<column width="250px" label="Descrizione attività"></column>
+									<column width="150px" label="Tipo rapporto lavorativo"></column>
+									<column width="100px" label="Ruolo"></column>
+									<column width="200px" label="Datore lavoro"></column>
+									<column width="80px" label=""></column>
+									<column width="80px" label=""></column>
+								</columns>
+								<rows>
+									<row self="@{each='EsperienzaLavorativa'}" value="@{EsperienzaLavorativa}">
+										<datebox readonly="true" width="80px" value="@{EsperienzaLavorativa.dataInizio}"
+											onChange='self.style="font-weight:bold"' format="yyyy" buttonVisible="false"/>
+										<datebox readonly="true" width="80px"  value="@{EsperienzaLavorativa.dataFine}"
+											onChange='self.style="font-weight:bold"' format="yyyy" buttonVisible="false"/>
+										<!-- <checkbox disabled="true"   width="50px" id="l1" checked="@{EsperienzaLavorativa.inCorso}"></checkbox> -->
+									
+										<checkbox disabled="true"  width="60px" id="l2" checked="@{EsperienzaLavorativa.flagPrincipale}"></checkbox>
+										<textbox readonly="true" width="140px" maxlength="255" value="@{EsperienzaLavorativa.tipoProfessione.denominazione}"></textbox>
+										<textbox readonly="true" width="160px" maxlength="255" value="@{EsperienzaLavorativa.professione.denominazione}"></textbox>
+										<textbox readonly="true" width="190px" maxlength="255" value="@{EsperienzaLavorativa.datoreDiLavoro.denominazione}"></textbox>
+										<textbox readonly="true" width="240px" maxlength="255" value="@{EsperienzaLavorativa.attivitaLavorative}"></textbox>
+										<textbox readonly="true" width="140px" maxlength="255" value="@{EsperienzaLavorativa.tipoEsperienza}"></textbox>
+										<textbox readonly="true" width="80px"  maxlength="255" value="@{EsperienzaLavorativa.ruolo}"></textbox>
+										<textbox readonly="true" width="180px" maxlength="255" value="@{EsperienzaLavorativa.datoreLavoro}"></textbox>
+										<button width="70px" label="modifica" forward="onModificaCarriera()" />
+										<button width="70px"  label="rimuovi" forward="onVerificaRimuoviEsperienze()" />
+									</row>
+								</rows>
+							</grid>
+							<separator />
+							<separator />
+							<separator />
+							<separator />
+							<h:table cellpadding="2" cellspacing="1" style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;">
+							<!-- <h:tr>
+									<h:td style="font-weight:bold;">In corso:</h:td>
+									<h:td>
+										<checkbox checked="@{win_carriera$CarrieraComposer.carrieraSelezionata.inCorso}"   id="in_corso"/>
+									</h:td>
+									<h:td></h:td>
+									<h:td></h:td>
+								</h:tr>
+							-->
+								<h:tr>
+									<h:td style="font-weight:bold;">Attuale posizione lavorativa:
+									</h:td>
+									<h:td>
+										<checkbox checked="@{win_carriera$CarrieraComposer.carrieraSelezionata.flagPrincipale}"  id="principale" />
+									</h:td>
+									<h:td></h:td>
+									<h:td></h:td>
+								</h:tr>
+								<h:tr>
+									<h:td>
+										<label id="lbl_data_inizio"  style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;">Anno di inizio:</label>
+									</h:td>
+									
+									<h:td>
+										<combobox id="dta_data_inizio" width="60px" model="@{win_carriera$CarrieraComposer.listaAnniInizio}" selectedItem="@{win_carriera$CarrieraComposer.carrieraSelezionata.dataInizioString}" readonly="true">
+											<comboitem     label="${each}"  value="${each}"/>
+										</combobox>
+									</h:td>
+									
+									
+								
+									<h:td></h:td>
+									<h:td></h:td>
+								</h:tr>
+								<h:tr>
+									<h:td>
+										<label id="lbl_data_fine"  style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;">Anno di fine:</label>
+									</h:td>
+									
+									<h:td>
+										<combobox id="dta_data_fine" width="60px" model="@{win_carriera$CarrieraComposer.listaAnniFine}" selectedItem="@{win_carriera$CarrieraComposer.carrieraSelezionata.dataFineString}" readonly="true">
+											<comboitem     label="${each}"  value="${each}"/>
+										</combobox>
+									</h:td>
+								
+									<h:td></h:td>
+									<h:td></h:td>
+								</h:tr>
+								
+								<h:tr>
+									<h:td width="240px"  style="tahoma,arial,sans-serif;font-size:8pt; margin-bottom:10px" >
+										Tipo:
+									</h:td>	 
+									<h:td> 
+										<combobox id="cmb_tipo" width="250px" style="tahoma,arial,sans-serif;font-size:8pt; margin-bottom:10px"  value="@{win_carriera$CarrieraComposer.carrieraSelezionata.tipoProfessione.denominazione,save-when='none'}"  model="@{win_carriera$CarrieraComposer.listaTipoProfessione}"  readonly="true">
+											<comboitem self="@{each=TipoProfessione}"  style="font-weight:normal;tahoma,arial,sans-serif;font-size:8pt;"    label="@{TipoProfessione.denominazione}" value="@{TipoProfessione.id}"/>
+										</combobox>
+									</h:td>
+								</h:tr>	
+								<h:tr>
+									<h:td>
+									 <label style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;" id="lbl_ultimo_datore" visible="false">
+											 	Ultimo Datore di lavoro:    
+										</label>
+										<label style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;" id="lbl_datore" visible="false">
+											 	Datore di lavoro:    
+										</label>
+									</h:td>
+									<h:td>
+										<combobox id="cmb_datori"  visible="false"  width="350px" style="tahoma,arial,sans-serif;font-size:8pt;"  value="@{win_carriera$CarrieraComposer.carrieraSelezionata.datoreDiLavoro.denominazione,save-when='none'}"  model="@{win_carriera$CarrieraComposer.listaDatoriDiLavoro}" readonly="true">
+											<comboitem self="@{each=DatoreDiLavoro}"  width="350px" style="tahoma,arial,sans-serif;font-size:8pt;" label="@{DatoreDiLavoro.denominazione}" value="@{DatoreDiLavoro.id}"/>
+										</combobox>
+									</h:td>
+									<h:td></h:td>
+									<h:td></h:td>
+								</h:tr>
+							
+								<h:tr>
+									<h:td>
+										<label style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;"  id="lbl_mansione" visible="false">Descrizione Attività:</label>
+									</h:td>
+									<h:td>
+										<textbox style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;" id="txt_mansione" value="@{win_carriera$CarrieraComposer.carrieraSelezionata.attivitaLavorative,save-when='none'}"   visible="false" width="200px" maxlength="255" ></textbox>
+									</h:td>
+								</h:tr>
+								<h:tr>
+									<h:td>
+										<label style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt; margin-bottom:10px; margin-top:10px"  id="lbl_nominativo" visible="false">Nominativo:</label>
+									</h:td>
+									<h:td>
+										<textbox style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;  margin-bottom:13px;  margin-top:7px" id="txt_nominativo"  visible="false" width="200px" maxlength="255"></textbox>
+									</h:td>
+									<h:td></h:td>
+									<h:td></h:td>
+								</h:tr>
+								<h:tr>
+										<h:td>
+										<label style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt; margin-bottom:10px; margin-top:10px"  id="lbl_professione" visible="false">Professione:</label>
+									</h:td>
+									<h:td> 
+										<combobox id="cmb_professione" width="250px"  style="font-weight:normal;tahoma,arial,sans-serif;font-size:8pt;margin-bottom:10px" visible="false"  value="@{win_carriera$CarrieraComposer.carrieraSelezionata.professione.denominazione,save-when='none'}"  model="@{win_carriera$CarrieraComposer.listaProfessione}"  readonly="true">
+											<comboitem self="@{each=Professione}"  style="font-weight:normal;tahoma,arial,sans-serif;font-size:8pt;"   label="@{Professione.denominazione}" value="@{Professione.id}"/>
+										</combobox>
+									</h:td>
+									<h:td></h:td>
+									<h:td></h:td>
+								</h:tr>		
+								<h:tr>
+									<h:td>
+										<label id="lbl_ruolo" visible="false" style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;">Ruolo:</label>
+									</h:td>
+									<h:td>
+										<textbox id="txt_ruolo" value="@{win_carriera$CarrieraComposer.carrieraSelezionata.ruolo,save-when='none'}" style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;" width="200px" maxlength="255"  visible="false"></textbox>
+									</h:td>
+									<h:td></h:td>
+									<h:td></h:td>
+								</h:tr>					
+								
+								<h:tr>
+									<h:td></h:td>
+										<h:td>
+											<separator />
+											<button  id="bnt_aggiungi_carriera" label="Aggiungi Carriera" mold="os"
+												image="../../icons/16x16/actions/page_save.png" />
+											<button visible="false" id="bnt_aggiorna_carriera" label="Modifica Carriera" mold="os"
+												image="../../icons/16x16/actions/page_save.png" />
+										</h:td>
+								</h:tr>
+							</h:table>
+						</h:div>
+					</h:div>
+				</vlayout>
+				</h:td>
+				</h:tr>
+				</h:table>
+
+			</hlayout>
+			<include src="footer.zul" />
+		</h:div>
+	</window>
+</zk>

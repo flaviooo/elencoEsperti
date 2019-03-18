@@ -1,0 +1,140 @@
+<?page title="Esperienze" contentType="text/html;charset=UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" arg0="./win_admin_filtri_ricerca"?>
+
+<zk>
+	<window title="Filtri Ricerca" border="normal"
+		id="win_admin_filtri_ricerca"
+		apply="it.ccse.bandiEsperti.zk.composers.AdminFiltriRicercaComposer" width="100%" height="85%">
+<!-- 			<style dynamic="true"> -->
+<!-- 				.z-tab .z-tab-hl:hover .z-tab-text	{ color: #FF0000; } -->
+<!-- 			</style> -->
+			<borderlayout width="100%">		
+            <west size="50%" border="none">
+	            <vlayout width="100%">
+					<grid width="98%" id="leftFilterGridPrecedentiIncarichi">
+						<auxhead>
+							<auxheader colspan="2">
+								<label value="Precedenti Incarichi Di Valutazione Di Progetti Di Ricerca" style="font-weight:bold"/>
+							</auxheader>
+						</auxhead>
+						<columns height="22px" visible="false">
+							<column width="50%" />
+							<column width="50%" />
+						</columns>
+						<rows>
+							<row> 
+								<cell align="right"><label value="RDS"/></cell>
+								<cell align="left"><checkbox id="chkPrecedentiIncarichiRds" checked="true"></checkbox></cell>
+							</row>
+							<row> 
+								<cell align="right"><label value="Altri Incarichi" tooltiptext="Internazionale, Europeo, MIUR" /></cell>
+								<cell align="left"><checkbox id="chkPrecedentiIncarichiAltro" checked="true" tooltiptext="Internazionale, Europeo, MIUR"></checkbox></cell>
+							</row>
+						</rows>
+					</grid>
+					<grid width="98%" id="leftFilterGridPubblicazioni">
+						<columns height="22px">
+							<column width="50%"	label="Pubblicazioni" />
+							<column width="50%"/>
+						</columns>
+						<rows>
+							<row> 
+								<cell align="right"><label value="Pubblicazioni"/></cell>
+								<cell align="left"><checkbox id="chkPubblicazioni" checked="true"></checkbox></cell>
+							</row>
+						</rows>
+					</grid>
+					<grid width="98%" id="leftFilterGridDatiAnagrafici">
+						<columns height="22px">
+							<column width="50%"	label="Dati Anagrafici" />
+							<column width="50%"/>
+						</columns>
+						<rows>
+							<row> 
+								<cell align="right"><label value="Cognome"/></cell>
+								<cell align="left"><textbox id="txtCognome" width="250"></textbox></cell>
+							</row>
+							<row> 
+								<cell align="right"><label value="Nati dal"/></cell>
+								<cell align="left"><datebox id="dtNatiEntro" buttonVisible="true"  format="dd/MM/yyyy"/></cell>
+							</row>
+						</rows>
+					</grid>
+					<radiogroup id="rdgEsperienze" forward="onCheck=onCheckEsperienza"/>
+					<grid width="98%" id="leftFilterGridEsperienze">
+						<columns height="22px">
+							<column width="50%"	label="Esperienze Professionali" />
+							<column width="50%" align="right">
+								<checkbox id="chkFiltraDettagliEsperienze" label="Filtra anche in finestra dettaglio"></checkbox>
+							</column>
+						</columns>
+						<rows>
+							<row>
+								<cell></cell>
+								<cell></cell>
+							</row>
+							<row> 
+								<cell align="right"><radio id="r1" radiogroup="rdgEsperienze" label="In Corso (*)" value="1"/></cell>
+								<cell align="left"><checkbox id="chkInCorso" checked="true"></checkbox></cell>
+							</row>
+							<row> 
+								<cell align="right"><radio id="r2" radiogroup="rdgEsperienze" label="In Corso e A Partire Da (**)" value="2"/></cell>
+								<cell align="left">
+									<vlayout>
+									<datebox id="dtAPartireDa" buttonVisible="true" format="yyyy"/>
+									</vlayout>
+								</cell>
+							</row>
+							<row> 
+								<cell align="right"><label value="Datore di Lavoro"/></cell>
+								<cell align="left">
+									<vlayout>
+										<hlayout>
+											<textbox id="txtDatoreAltro"/>
+											<label value="Altro"/>
+										</hlayout>
+									</vlayout>
+								</cell>
+							</row>
+						</rows>
+					</grid>
+					<label style="font-size=8px;" value="* è necessario spuntare (check) il campo per applicare il filtro"></label>
+					<label style="font-size=8px;" value="** è necessario specificare una data per applicare il filtro"></label>
+				</vlayout>
+            </west>
+            <east size="50%" border="none" autoscroll="true">
+				<grid width="98%" id="rightFilterGrid">
+					<columns height="22px">
+						<column width="100%">
+							<hbox width="100%">
+								<cell width="50%" align="left">
+									<label value="Competenze" style="font-weight:bold;"></label>
+								</cell>
+								<cell width="50%" align="right">
+									<checkbox id="chkFiltraDettagliCompetenza" label="Filtra anche in finestra dettaglio"></checkbox>
+								</cell>
+							</hbox>
+						</column>
+					</columns>
+					<rows>
+						<row>
+							<cell>
+								<tabbox id="tbbCompetenze" width="100%" mold="accordion">
+									<tabs />
+									<tabpanels />
+								</tabbox>
+							</cell>
+						</row>
+					</rows>
+				</grid>
+            </east>
+            <south >
+            	<hlayout height="100%" spacing="10px">
+            		<button label="Chiudi" forward="onChiudiFinestra()"></button>
+            		<button id="btnApplicaFiltri" label="Applica Filtri" autodisable="self"></button>
+            		<button label="Reset Filtri" forward="onResetFiltri()"></button>
+            	</hlayout>
+            </south>
+		</borderlayout>
+	</window>
+</zk>
