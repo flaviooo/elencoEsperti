@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?page title="new page title" contentType="text/html;charset=UTF-8"?>
-<?link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"?>
-<zk xmlns:h="http://www.w3.org/1999/xhtml">
-<window id="win_anteprima" title="Anteprima Documento" border="normal" closable="true" 
-apply="it.ccse.bandiEsperti.zk.composers.AnteprimaDocComposer" xmlns:c="client">
-<iframe id="frame" width="800px" height="500px" />
-</window>
-</zk>
