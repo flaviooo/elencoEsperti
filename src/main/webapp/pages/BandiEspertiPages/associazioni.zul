@@ -95,7 +95,7 @@
 							<separator orient="vertical"  />
 							<separator orient="vertical"  />
 							<separator orient="vertical"  />
-							<button id="bnt_ricerca" label="Ricerca" image="../../icons/16x16/actions/search.png" />
+							<button id="bnt_ricerca" label="Ricerca" image="../../icons/32x32/search.png" />
 							<separator orient="vertical"  />
 							<separator orient="vertical"  />
 							<separator orient="vertical"  />
@@ -104,7 +104,7 @@
 							<separator orient="vertical"  />
 							<separator orient="vertical"  />
 							<separator orient="vertical"  />
-							<button id="bnt_esporta"  label="Esporta"  image="../../icons/16x16/actions/XLSX.png"/>
+							<button id="bnt_esporta"  label="Esporta"  image="../../icons/32x32/XLSX.png"/>
 							<separator orient="vertical"  />
 							<separator orient="vertical"  />
 							<separator orient="vertical"  />
@@ -113,9 +113,9 @@
 							<separator orient="vertical"  />
 							<separator orient="vertical"  />
 							
-							<button  id="bnt_aggiungi" label="Aggiungi" image="../../icons/16x16/actions/page_save.png" />
+							<button  id="bnt_aggiungi" label="Aggiungi" image="../../icons/32x32/page_save.png" />
 							
-							<button  id="bnt_aggiorna" visible="false" label="Aggiorna" image="../../icons/16x16/actions/page_save.png" />
+							<button  id="bnt_aggiorna" visible="false" label="Aggiorna" image="../../icons/32x32/page_save.png" />
 									
 							<separator />
 							<separator />
