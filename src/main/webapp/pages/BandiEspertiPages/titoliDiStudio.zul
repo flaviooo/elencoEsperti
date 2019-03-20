@@ -72,10 +72,10 @@
 									<h:td></h:td>
 										<h:td>
 											<separator />
-											<button  id="bnt_aggiungi" label="Aggiungi Titolo di Studio" mold="os"
-												image="../../icons/16x16/actions/page_save.png" />
-											<button visible="false" id="bnt_aggiorna" label="Modifica Titolo di Studio" mold="os"
-												image="../../icons/16x16/actions/page_save.png" />
+											<button  id="bnt_aggiungi" label="Aggiungi Titolo di Studio" 
+												image="../../icons/32x32/page_save.png" />
+											<button visible="false" id="bnt_aggiorna" label="Modifica Titolo di Studio" 
+												image="../../icons/32x32/page_save.png" />
 										</h:td>
 								</h:tr>
 							</h:table>

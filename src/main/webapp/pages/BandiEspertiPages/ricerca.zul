@@ -70,11 +70,11 @@
 							<separator orient="horizontal"/>
 						
 							<separator orient="horizontal"/>
-							<button style="height:30px" id="bnt_ricerca" label="Ricerca" image="../../icons/16x16/actions/search.png" />
+							<button style="height:30px" id="bnt_ricerca" label="Ricerca" image="../../icons/32x32/search.png" />
 					
 							<separator orient="vertical"  />
 							<separator orient="vertical"  />
-							<button style="height:30px" id="bnt_esport" disabled="true" label="Esporta Ricerca"  image="../../icons/16x16/actions/XLSX.png" forward="onEsportaRicerca()" />
+							<button style="height:30px" id="bnt_esport" disabled="true" label="Esporta Ricerca"  image="../../icons/32x32/XLSX.png" forward="onEsportaRicerca()" />
 							<separator />
 							<separator />
 							<separator />

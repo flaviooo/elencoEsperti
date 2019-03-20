@@ -62,10 +62,10 @@
 									<h:td></h:td>
 										<h:td>
 											<separator />
-											<button  id="bnt_aggiungi" label="Aggiungi Settore" mold="os"
-												image="../../icons/16x16/actions/page_save.png" />
-											<button visible="false" id="bnt_aggiorna" label="Modifica Settore" mold="os"
-												image="../../icons/16x16/actions/page_save.png" />
+											<button  id="bnt_aggiungi" label="Aggiungi Settore" 
+												image="../../icons/32x32/page_save.png" />
+											<button visible="false" id="bnt_aggiorna" label="Modifica Settore" 
+												image="../../icons/32x32/page_save.png" />
 										</h:td>
 								</h:tr>
 							</h:table>

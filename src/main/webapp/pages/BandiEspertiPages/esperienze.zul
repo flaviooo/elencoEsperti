@@ -262,7 +262,7 @@
 											<button  id="bnt_aggiungi_esperienza" label="Aggiungi Esperienza"
 												image="../../icons/32x32/page_save.png" />
 											<button visible="false" id="bnt_aggiorna_esperienza" label="Modifica Esperienza"
-												image="../../icons/16x16/actions/page_save.png" />
+												image="../../icons/32x32/page_save.png" />
 										</h:td>
 								</h:tr>
 							</h:table>

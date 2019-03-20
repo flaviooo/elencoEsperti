@@ -137,7 +137,7 @@
 									<h:td>
 										<separator />
 										<button id="bnt_aggiungi_esperienze" label="Aggiungi Esperienza professionale"
-											mold="os" image="../../icons/16x16/actions/page_save.png" />
+											 image="../../icons/32x32/page_save.png" />
 									</h:td>
 								</h:tr>
 							</h:table>

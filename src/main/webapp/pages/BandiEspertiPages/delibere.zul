@@ -72,9 +72,9 @@
 										<h:td>
 											<separator />
 											<button  id="bnt_aggiungi" label="Aggiungi Delibera" 
-												image="../../icons/16x16/actions/page_save.png" />
-											<button visible="false" id="bnt_aggiorna" label="Modifica Delibera" mold="os"
-												image="../../icons/16x16/actions/page_save.png" />
+												image="../../icons/32x32/page_save.png" />
+											<button visible="false" id="bnt_aggiorna" label="Modifica Delibera" 
+												image="../../icons/32x32/page_save.png" />
 										</h:td>
 								</h:tr>
 							</h:table>
