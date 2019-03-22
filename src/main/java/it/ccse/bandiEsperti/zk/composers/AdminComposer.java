@@ -9,7 +9,7 @@ import it.ccse.bandiEsperti.business.dto.FiltroRicercaEspertiDTO.TipoFiltro;
 import it.ccse.bandiEsperti.business.dto.RicercaEspertiDTO;
 import it.ccse.bandiEsperti.business.model.Esperto;
 import it.ccse.bandiEsperti.enums.OperazioniAmministratore;
-import it.ccse.bandiEsperti.fileFilters.CVFileFilter;
+import it.ccse.bandiEsperti.utils.CVFileFilter;
 import it.ccse.bandiEsperti.utils.PdfUtils;
 import it.ccse.bandiEsperti.utils.invioMail.InvioMailHelper;
 import it.ccse.bandiEsperti.zk.assemblers.EspertoAssembler;

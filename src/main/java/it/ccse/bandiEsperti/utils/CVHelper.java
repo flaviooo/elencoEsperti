@@ -1,7 +1,6 @@
 package it.ccse.bandiEsperti.utils;
 
 import it.ccse.bandiEsperti.business.dto.EspertoDTO;
-import it.ccse.bandiEsperti.fileFilters.CVFileFilter;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
