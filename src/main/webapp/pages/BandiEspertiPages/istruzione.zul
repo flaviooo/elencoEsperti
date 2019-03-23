@@ -6,7 +6,7 @@
 <?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" arg0="./win_istruzione"?>
 <zk xmlns:h="http://www.w3.org/1999/xhtml" xmlns:c="client">
 	<window border="none" id="win_istruzione" apply="it.ccse.bandiEsperti.zk.composers.IstruzioneComposer"
-		style="font:80% tahoma,arial,sans-serif;font-size:12pt;" zclass="ContenutoGrey" xmlns:w="client">
+		style="font:80% tahoma,arial,sans-serif;font-size:10pt;" zclass="ContenutoGrey" xmlns:w="client">
 		<include id="includeStyle" src="../../css/style.zul" />		
 		<custom-attributes scope="request" org.zkoss.zk.desktop.nocache="true" />
 		<h:div id="container">

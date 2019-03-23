@@ -399,6 +399,27 @@ div#registrazione td {
 	background-image: none;
 	background-color: #DD0000;
 }
+#ButDatoriDiLavoro,#ButDatoriDiLavoro:visited {
+	background: url(../../img/butDatoriDiLavoro.png);
+	width: 225px;
+	padding: 0;
+}
+
+#ButDatoriDiLavoro:hover {
+	background-position: 0 100%;
+	padding: 0;
+}
+
+#ButDelibere,#ButDelibere:visited {
+	background: url(../../img/butDelibere.png);
+	width: 225px;
+	padding: 0;
+}
+
+#ButDelibere:hover {
+	background-position: 0 100%;
+	padding: 0;
+}
 
 #ButTitoliDiStudio,#ButTitoliDiStudio:visited {
 	background: url(../../img/butTitoliDiStudio.png);
