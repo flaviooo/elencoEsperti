@@ -16,7 +16,7 @@ html,body {
 body {
 	font: 76% tahoma, arial, sans-serif;
 	text-align: center;
-	background: #fff url(../../img/pageBg.jpg) repeat-y 50% 0;
+	background: #fff url(../../img/pageBg.jpg) repeat-y 80% 0;
 	color: #333;
 }
 
