@@ -2,12 +2,9 @@
 @chars et "utf-8";
 
 /* CSS Document */ /* colors
-blue:#0075bf;
-orange:#e39600;
-light gray:#838383;
-dark grey:#333;
-green:#338d4d;
-*/ /* html tag definition*/
+blue:#0075bf;	orange:#e39600;		light gray:#838383;		dark grey:#333;		green:#338d4d;
+*/
+
 html,body {
 	margin: 0;
 	padding: 0;
@@ -97,6 +94,16 @@ div#logo {
 height: 120px;
 }
 
+input[type="text"]
+{
+    font-size:14px;
+}
+
+input{
+    height:16px;
+   
+}
+
 /* form ricerca */
 div#ricerca {
 	float: right;
@@ -157,7 +164,6 @@ div#areaRiservata tr {
 div#areaRiservata td {
 	padding-left: 10px;
 }
-
 /* menu SX */
 ul#MenuSx {
 	padding: 0;
@@ -187,55 +193,6 @@ ul#MenuSx li a {
 	margin: 0;
 	padding: 0;
 }
-
-#ButBigRicerca,#ButBigRicerca:visited {
-	background: url(../../img/butBigRicercaSistema.png);
-}
-
-#ButBigRicerca:hover {
-	background-position: 0 100%;
-}
-
-#ButBigAliquoteElet,#ButBigAliquoteElet:visited {
-	background: url(../../img/butBigAliquoteElettricita.png);
-}
-
-#ButBigAliquoteElet:hover {
-	background-position: 0 100%;
-}
-
-#ButBigAliquoteGas,#ButBigAliquoteGas:visited {
-	background: url(../../img/butBigAliquoteGas.png);
-}
-
-#ButBigAliquoteGas:hover {
-	background-position: 0 100%;
-}
-
-#ButBigBonus,#ButBigBonus:visited {
-	background: url(../../img/butBigBonus.png);
-}
-
-#ButBigBonus:hover {
-	background-position: 0 100%;
-}
-
-#ButBigProgetti,#ButBigProgetti:visited {
-	background: url(../../img/ButBigProgettiConsumatori.png);
-}
-
-#ButBigProgetti:hover {
-	background-position: 0 100%;
-}
-
-#ButBigCircolari,#ButBigCircolari:visited {
-	background: url(../../img/butBigCircolari.png);
-}
-
-#ButBigCircolari:hover {
-	background-position: 0 100%;
-}
-
 /* menu DX */
 ul#menuDx {
 	list-style: none;
@@ -260,61 +217,6 @@ ul#menuDx li a {
 	display: block;
 }
 
-#ButNews,#ButNews:visited {
-	background: url(../../img/butDxNews.png);
-	padding: 0;
-	margin: 1px 0;
-}
-
-#ButNews:hover {
-	background-position: 0 100%;
-}
-
-#ButAvvisi,#ButAvvisi:visited {
-	background: url(../../img/butDxAvvisi.png);
-	padding: 0;
-	margin: 1px 0;
-}
-
-#ButAvvisi:hover {
-	background-position: 0 100%;
-}
-
-#ButBandi,#ButBandi:visited {
-	background: url(../../img/butDxBandi.png);
-	padding: 0;
-}
-
-#ButBandi:hover {
-	background-position: 0 100%;
-}
-
-.NewsDx {
-	height: 100px;
-}
-
-.AvvisiDx {
-	height: 210px;
-}
-
-.NewsDx {
-	background: #fff url(../../img/bgNews.png) no-repeat 13px 100%;
-}
-
-.AvvisiDx {
-	background: #fff url(../../img/bgAvvisi.png) no-repeat 13px 100%;
-}
-
-ul li #News a,ul li #Avvisi a {
-	line-height: 1.2em;
-	font-size: 8pt;
-	text-decoration: none;
-	margin: 1px 0 1px 20px;
-}
-
-ul li #News a,ul li #News a:visited {
-	color: #fff;
-}
 
 /* menu Centro */
 ul#MenuCentro {
@@ -340,37 +242,6 @@ ul#MenuCentro li a {
 	background-repeat: no-repeat;
 	margin: 5px 0;
 	display: block;
-}
-
-#ButSetElettrico,#ButSetElettrico:visited {
-	background: url(../../img/butCentroElettricita.png);
-	padding: 0;
-}
-
-#ButSetElettrico:hover {
-	background-position: 0 100%;
-}
-
-#ButRegistrazione,#ButRegistrazione:visited {
-	background: url(../../images/registrazione.png);
-	width: 265px;
-	padding: 0;
-}
-
-#ButRegolamenti:hover {
-	background-position: 0 100%;
-	padding: 0;
-}
-
-#ButPrezzi,#ButPrezzi:visited {
-	background: url(../../img/butDatiAnagrafici.png);
-	width: 225px;
-	padding: 0;
-}
-
-#ButPrezzi:hover {
-	background-position: 0 100%;
-	padding: 0;
 }
 
 
@@ -436,25 +307,6 @@ ul#MenuCentro li a {
 	background-position: 0 100%;
 }
 
-.NewsCentro {
-	height: 125px;
-	color: #0075bf;
-	background: #fff url(../../img/bgNewsCentro.png) no-repeat 10px 100%;
-}
-
-ul li #NewsElettrico a,ul li #NewsGas a {
-	font-size: 8pt;
-	text-decoration: none;
-	margin: 5px 0 5px 20px;
-}
-
-.dataNews {
-	font-size: 7pt;
-	color: #838383;
-	text-align: right;
-	padding: 15px 0 5px 5px;
-	margin-right: 10px;
-}
 
 .dataNewsWhite {
 	font-size: 7pt;
@@ -478,13 +330,13 @@ ul li #NewsElettrico a,ul li #NewsGas a {
 /* footer */
 div#footer {
 	clear: left;
-	width: 876px;
+	width: 870px;
 	color: #0075bf;
 	background: #fff url(../../img/footerBg.png) repeat-x;
-	height: 20px;
+	height: 60px;
 	margin: 10px;
-	padding: 5px 10px;
-	font-size: 11px;
+	padding: 0px 10px;
+	font-size: 12px;
 	text-align: center;
 }
 
@@ -551,42 +403,16 @@ div#registrazione td {
 	background-color: #DD0000;
 }
 
-#ButDatoriDiLavoro,#ButDatoriDiLavoro:visited {
-	background: url(../../img/butDatoriDiLavoro.png);
-	width: 225px;
-	padding: 0;
-}
-
-#ButDatoriDiLavoro:hover {
-	background-position: 0 100%;
-	padding: 0;
-}
-
-
-#ButDelibere,#ButDelibere:visited {
-	background: url(../../img/butDelibere.png);
-	width: 225px;
-	padding: 0;
-}
-
-#ButDelibere:hover {
-	background-position: 0 100%;
-	padding: 0;
-}
-
 #ButTitoliDiStudio,#ButTitoliDiStudio:visited {
 	background: url(../../img/butTitoliDiStudio.png);
 	width: 225px;
 	padding: 0;
 }
 
-
-
 #ButTitoliDiStudio:hover {
 	background-position: 0 100%;
 	padding: 0;
 }
-
 
 #ButAtenei,#ButAtenei:visited {
 	background: url(../../img/butAtenei.png);
@@ -594,12 +420,10 @@ div#registrazione td {
 	padding: 0;
 }
 
-
 #ButAtenei:hover {
 	background-position: 0 100%;
 	padding: 0;
 }
-
 
 #ButSettori,#ButSettori:visited {
 	background: url(../../img/butSettori.png);
@@ -610,6 +434,12 @@ div#registrazione td {
 
 #ButSettori:hover {
 	background-position: 0 100%;
+	padding: 0;
+}
+
+#ButPrezzi,#ButPrezzi:visited {
+	background: url(../../img/butDatiAnagrafici.png);
+	width: 225px;
 	padding: 0;
 }
 
@@ -641,7 +471,6 @@ div#registrazione td {
 	width: 225px;
 	padding: 0;
 }
-
 
 #ButAssociazioni:hover {
 	background-position: 0 100%;
