@@ -35,12 +35,11 @@
 								td.z-row-inner,div.z-row-cnt { padding: 0 2px; }
 										</style>
 						<!--   <grid width="600px"  id="inboxGrid" rowRenderer="it.ccse.bandiEsperti.zk.rowRenderer.IstruzioneRowRenderer" > -->
-						<grid  width="670px" id="inboxGrid"
-								model="@{win_esperienze$EsperienzeComposer.listaEsperienze}">
+						<grid  width="670px" id="inboxGrid"		model="@{win_esperienze$EsperienzeComposer.listaEsperienze}">
 								<columns height="42px">
 									<column sort="auto(dataInizio)"  width="80px" label="Data inizio"></column>
 									<column width="80px" label="Data fine"></column>
-									<column width="60px" label="In Corso"></column>
+									<column width="80px" label="In Corso"></column>
 									<column width="100px" label="Tipo Professione"></column>
 									<column width="180px" label="Datore di Lavoro"></column>
 									<column width="200px" label="Descrizione attività"></column>
@@ -104,9 +103,13 @@
 								</rows>
 							</grid-->
 
-							<h:table  cellpadding="1" cellspacing="1" style="font-weight:bold;tahoma,arial,sans-serif;font-size:10pt;">
+							<h:table  cellpadding="1" cellspacing="1" style="font-weight:bold;tahoma,arial,sans-serif;">
 								<h:tr>
-									<h:td style="font-weight:bold;">In corso:</h:td>
+									<h:td style="font-weight:bold;">
+									<label id="lbl_data_in_corso"  style="font-weight:bold;tahoma,arial,sans-serif;">
+									In corso:
+									</label>
+									</h:td>
 									<h:td>
 										<checkbox checked="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.inCorso}"   id="in_corso"/>
 									</h:td>
@@ -115,7 +118,7 @@
 								</h:tr>
 								<h:tr>
 									<h:td>
-										<label id="lbl_data_inizio"  style="font-weight:bold;tahoma,arial,sans-serif;font-size:10pt;">Data inizio:</label><h:span style="color: red;">*</h:span>
+										<label id="lbl_data_inizio"  style="font-weight:bold;tahoma,arial,sans-serif;">Data inizio:</label><h:span style="color: red;">*</h:span>
 									</h:td>
 									<h:td>
 										<combobox id="dta_data_inizio" width="60px" model="@{win_esperienze$EsperienzeComposer.listaAnniInizio}" selectedItem="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.dataInizioString}" readonly="true">
@@ -128,7 +131,7 @@
 								</h:tr>
 								<h:tr>
 									<h:td>
-										<label id="lbl_data_fine"  style="font-weight:bold;tahoma,arial,sans-serif;font-size:10pt;">Data fine:</label>
+										<label id="lbl_data_fine"  style="font-weight:bold;tahoma,arial,sans-serif;">Data fine:</label>
 									</h:td>
 									<h:td>
 										<combobox id="dta_data_fine" width="60px" model="@{win_esperienze$EsperienzeComposer.listaAnniFine}" selectedItem="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.dataFineString}" readonly="true">
@@ -140,28 +143,33 @@
 								</h:tr>
 								
 								<h:tr>
-									<h:td width="240px"  style="tahoma,arial,sans-serif;font-size:10pt; margin-bottom:10px" >
-										Tipo:<h:span style="color: red;">*</h:span>
+									<h:td>
+									<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_tipo" >
+										Tipo:
+										</label><h:span style="color: red;">*</h:span>
 									</h:td>	 
 									<h:td> 
-										<combobox id="cmb_tipo" width="250px" style="tahoma,arial,sans-serif;font-size:10pt; margin-bottom:10px"  value="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.tipoProfessione.denominazione,save-when='none'}"  model="@{win_esperienze$EsperienzeComposer.listaTipoProfessione}"  readonly="true">
-											<comboitem self="@{each=TipoProfessione}"  style="font-weight:normal;tahoma,arial,sans-serif;font-size:10pt;"    label="@{TipoProfessione.denominazione}" value="@{TipoProfessione.id}"/>
+										<combobox id="cmb_tipo" width="250px" style="tahoma,arial,sans-serif; margin-bottom:10px"  value="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.tipoProfessione.denominazione,save-when='none'}"  model="@{win_esperienze$EsperienzeComposer.listaTipoProfessione}"  readonly="true">
+											<comboitem self="@{each=TipoProfessione}"  style="font-weight:normal;tahoma,arial,sans-serif;"    label="@{TipoProfessione.denominazione}" value="@{TipoProfessione.id}"/>
 										</combobox>
 									</h:td>
 								</h:tr>	
 								
 								<h:tr>
 									<h:td>
-									 <label style="font-weight:bold;tahoma,arial,sans-serif;font-size:10pt;" id="lbl_ultimo_datore" visible="false">
+									 <label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_ultimo_datore" visible="false">
 											 	Ultimo Datore di lavoro:    
 										</label>
-										<label style="font-weight:bold;tahoma,arial,sans-serif;font-size:10pt;" id="lbl_datore" visible="false">
+										<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_datore" visible="false">
 											 	Datore di lavoro: 
 										</label><label id="lbl_datore_mand" visible="false" style="color: red;">*</label>
 									</h:td>
 									<h:td>
-									  <combobox id="cmb_datori" visible="false" width="350px" style="tahoma,arial,sans-serif;font-size:10pt;  text-align: left;"  value="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.datoreDiLavoro.denominazione,save-when='none'}"  model="@{win_esperienze$EsperienzeComposer.listaDatoriDiLavoro}" readonly="true">
-											<comboitem self="@{each=DatoreDiLavoro}"  width="350px" style="tahoma,arial,sans-serif;font-size:10pt; text-align: left;" label="@{DatoreDiLavoro.denominazione}" value="@{DatoreDiLavoro.id}"/>
+									  <combobox id="cmb_datori" visible="false" width="350px" style="tahoma,arial,sans-serif;text-align: left;"
+									    value="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.datoreDiLavoro.denominazione,save-when='none'}"
+									    model="@{win_esperienze$EsperienzeComposer.listaDatoriDiLavoro}" readonly="true">
+											<comboitem self="@{each=DatoreDiLavoro}"  width="350px" style="tahoma,arial,sans-serif; text-align: left;"
+											 label="@{DatoreDiLavoro.denominazione}" value="@{DatoreDiLavoro.id}"/>
 									  </combobox>
 									</h:td>
 									<h:td></h:td>
@@ -170,29 +178,29 @@
 								
 										<h:tr>
 									<h:td>
-										<label style="font-weight:bold;tahoma,arial,sans-serif;font-size:10pt;"  id="lbl_mansione">Descrizione Attività:</label><h:span style="color: red;">*</h:span>
+										<label style="font-weight:bold;tahoma,arial,sans-serif;"  id="lbl_mansione">Descrizione Attività:</label><h:span style="color: red;">*</h:span>
 									</h:td>
 									<h:td>
-										<textbox style="font-weight:bold;tahoma,arial,sans-serif;font-size:10pt;" id="txt_mansione" value="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.attivitaLavorative,save-when='none'}"  width="200px" maxlength="600"></textbox>
+										<textbox style="font-weight:bold;tahoma,arial,sans-serif;" id="txt_mansione" value="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.attivitaLavorative,save-when='none'}"  width="200px" maxlength="600"></textbox>
 									</h:td>
 								</h:tr>
 								<h:tr>
 									<h:td>
-										<label style="font-weight:bold;tahoma,arial,sans-serif;font-size:10pt; margin-bottom:10px; margin-top:10px"  id="lbl_nominativo" visible="false">Nominativo datore di lavoro:</label>
+										<label style="font-weight:bold;tahoma,arial,sans-serif; margin-bottom:10px; margin-top:10px"  id="lbl_nominativo" visible="false">Nominativo datore di lavoro:</label>
 									</h:td>
 									<h:td>
-										<textbox style="font-weight:bold;tahoma,arial,sans-serif;font-size:10pt;  margin-bottom:13px;  margin-top:7px" id="txt_nominativo"  visible="false" width="200px" maxlength="255"></textbox>
+										<textbox style="font-weight:bold;tahoma,arial,sans-serif;  margin-bottom:13px;  margin-top:7px" id="txt_nominativo"  visible="false" width="200px" maxlength="255"></textbox>
 									</h:td>
 									<h:td></h:td>
 									<h:td></h:td>
 								</h:tr>
 								<h:tr>
 										<h:td>
-										<label style="font-weight:bold;tahoma,arial,sans-serif;font-size:10pt; margin-bottom:10px; margin-top:10px"  id="lbl_professione" >Professione:</label><h:span style="color: red;">*</h:span>
+										<label style="font-weight:bold;tahoma,arial,sans-serif; margin-bottom:10px; margin-top:10px"  id="lbl_professione" >Professione:</label><h:span style="color: red;">*</h:span>
 									</h:td>
 									<h:td> 
-										<combobox  id="cmb_professione" width="250px"  style="font-weight:normal;tahoma,arial,sans-serif;font-size:10pt;margin-bottom:10px;"  value="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.professione.denominazione,save-when='none'}"  model="@{win_esperienze$EsperienzeComposer.listaProfessione}"  readonly="true">
-											<comboitem self="@{each=Professione}"  style="font-weight:normal;tahoma,arial,sans-serif;font-size:10pt; "   label="@{Professione.denominazione}" value="@{Professione.id}"/>
+										<combobox  id="cmb_professione" width="250px"  style="font-weight:normal;tahoma,arial,sans-serif;margin-bottom:10px;"  value="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.professione.denominazione,save-when='none'}"  model="@{win_esperienze$EsperienzeComposer.listaProfessione}"  readonly="true">
+											<comboitem self="@{each=Professione}"  style="font-weight:normal;tahoma,arial,sans-serif; "   label="@{Professione.denominazione}" value="@{Professione.id}"/>
 										</combobox>
 									</h:td>
 									<h:td></h:td>
@@ -200,10 +208,10 @@
 								</h:tr>		
 								<h:tr>
 									<h:td>
-										<label id="lbl_ruolo" style="font-weight:bold;tahoma,arial,sans-serif;font-size:10pt;" visible="false">Ruolo:</label><label id="lbl_ruolo_mand" visible="false" style="color: red;">*</label>
+										<label id="lbl_ruolo" style="font-weight:bold;tahoma,arial,sans-serif;" visible="false">Ruolo:</label><label id="lbl_ruolo_mand" visible="false" style="color: red;">*</label>
 									</h:td>
 									<h:td>
-										<textbox id="txt_ruolo"  visible="false" value="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.ruolo,save-when='none'}" style="font-weight:bold;tahoma,arial,sans-serif;font-size:10pt;" width="200px" maxlength="255" ></textbox>
+										<textbox id="txt_ruolo"  visible="false" value="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.ruolo,save-when='none'}" style="font-weight:bold;tahoma,arial,sans-serif;" width="200px" maxlength="255" ></textbox>
 									</h:td>
 									<h:td></h:td>
 									<h:td></h:td>
@@ -211,11 +219,11 @@
 								
 								<h:tr>
 								<h:td style="font-weight:bold;">
-										<label style="font-weight:bold;tahoma,arial,sans-serif;font-size:10pt;" id="lbl_keyword1"> Keyword 1: </label> <h:span style="color: red;">*</h:span>
+										<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_keyword1"> Keyword 1: </label> <h:span style="color: red;">*</h:span>
 									</h:td>																																																										
 									<h:td style="font-weight:bold;">
 									
-										<combobox id="cmb_specializzazioni_1"   width="305px"  style="tahoma,arial,sans-serif;font-size:10pt;"   value="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.specializzazione1.nome,save-when='none'}"  readonly="true" >
+										<combobox id="cmb_specializzazioni_1"   width="350px"  style="tahoma,arial,sans-serif;"   value="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.specializzazione1.nome,save-when='none'}"  readonly="true" >
 										</combobox>
 									
 									</h:td>
@@ -223,11 +231,11 @@
 								</h:tr>
 								<h:tr>
 									<h:td style="font-weight:bold;">
-										<label style="font-weight:bold;tahoma,arial,sans-serif;font-size:10pt;" id="lbl_keyword2"> Keyword 2: </label> 
+										<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_keyword2"> Keyword 2: </label> 
 									</h:td>																																																										
 									<h:td style="font-weight:bold;">
 									
-										<combobox id="cmb_specializzazioni_2"   width="305px"  style="tahoma,arial,sans-serif;font-size:10pt;"   value="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.specializzazione2.nome,save-when='none'}"  readonly="true">
+										<combobox id="cmb_specializzazioni_2"   width="350px"  style="tahoma,arial,sans-serif;"   value="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.specializzazione2.nome,save-when='none'}"  readonly="true">
 										</combobox>
 									
 									</h:td>
@@ -235,11 +243,11 @@
 								</h:tr>
 								<h:tr>
 									<h:td style="font-weight:bold;">
-										<label style="font-weight:bold;tahoma,arial,sans-serif;font-size:10pt;" id="lbl_keyword3"> Keyword 3: </label> 
+										<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_keyword3"> Keyword 3: </label> 
 									</h:td>																																																										
 									<h:td style="font-weight:bold;">
-									
-										<combobox id="cmb_specializzazioni_3"   width="305px"  style="tahoma,arial,sans-serif;font-size:10pt;"   value="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.specializzazione3.nome,save-when='none'}"  readonly="true">
+										<combobox id="cmb_specializzazioni_3"   width="350px"  style="tahoma,arial,sans-serif;"  
+										 value="@{win_esperienze$EsperienzeComposer.esperienzaSelezionata.specializzazione3.nome,save-when='none'}"  readonly="true">
 										</combobox>
 									</h:td>
 								</h:tr>

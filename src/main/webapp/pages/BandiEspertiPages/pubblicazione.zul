@@ -7,7 +7,7 @@
 <?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" arg0="./win_pubblicazione"?>
 <zk xmlns:h="http://www.w3.org/1999/xhtml" xmlns:c="client">
 	<window border="none" id="win_pubblicazione" apply="it.ccse.bandiEsperti.zk.composers.PubblicazioneComposer"
-		style="font:80% tahoma,arial,sans-serif;font-size:8pt;" zclass="ContenutoGrey" xmlns:w="client">
+		style="font:80% tahoma,arial,sans-serif;font-size:10pt;" zclass="ContenutoGrey" xmlns:w="client">
 		<include id="includeStyle" src="../../css/style.zul" />
 		<custom-attributes scope="request" org.zkoss.zk.desktop.nocache="true"/>
 		<h:div id="container">
@@ -86,20 +86,19 @@
 
 							<h:table cellpadding="2" cellspacing="1">
 								<h:tr>
-									<h:td style="font-weight:bold;">
+									<h:td>
 										<h:p>Pubblicazione(*): <h:span style="color: red;">*</h:span></h:p>
 									</h:td>
 									<h:td>
 										<textbox id="txt_descrizione" value="@{win_pubblicazione$PubblicazioneComposer.pubblicazioneSelezionata.descrizione,save-when='none'}"
 											width="400px"
 											maxlength="1000"
-											style="font:80% tahoma,arial,sans-serif;font-size:8pt;"
 											constraint="no empty" 
 											rows="3"/>
 									</h:td>
 								</h:tr>
 								<h:tr>
-									<h:td style="font-weight:bold;">
+									<h:td>
 										Anno di pubblicazione: <h:span style="color: red;">*</h:span>
 									</h:td>
 									<h:td>
@@ -111,33 +110,33 @@
 								</h:tr>
 								<h:tr>
 								
-								  <h:td style="font-weight:bold;">
+								  <h:td>
 										Keyword 1: <h:span style="color: red;">*</h:span>
 									</h:td>																																																										
-									<h:td style="font-weight:bold;">
-										<combobox id="cmb_specializzazioni_1"   width="305px"  style="tahoma,arial,sans-serif;font-size:8pt;"   value="@{win_pubblicazione$PubblicazioneComposer.pubblicazioneSelezionata.specializzazione1.nome,save-when='none'}"  readonly="true">
+									<h:td>
+										<combobox id="cmb_specializzazioni_1"   width="400px"  style="tahoma,arial,sans-serif;"   value="@{win_pubblicazione$PubblicazioneComposer.pubblicazioneSelezionata.specializzazione1.nome,save-when='none'}"  readonly="true">
 										</combobox>
 									</h:td>
 								</h:tr>
 								
 								<h:tr>
 								
-								  <h:td style="font-weight:bold;">
+								  <h:td>
 										Keyword 2:
 									</h:td>																																																										
-									<h:td style="font-weight:bold;">
-										<combobox id="cmb_specializzazioni_2"   width="305px"  style="tahoma,arial,sans-serif;font-size:8pt;"   value="@{win_pubblicazione$PubblicazioneComposer.pubblicazioneSelezionata.specializzazione2.nome,save-when='none'}"  readonly="true">
+									<h:td>
+										<combobox id="cmb_specializzazioni_2"   width="400px"  style="tahoma,arial,sans-serif;"   value="@{win_pubblicazione$PubblicazioneComposer.pubblicazioneSelezionata.specializzazione2.nome,save-when='none'}"  readonly="true">
 										</combobox>
 									</h:td>
 								</h:tr>
 								
 								<h:tr>
 								
-								  <h:td style="font-weight:bold;">
+								  <h:td>
 										Keyword 3:
 									</h:td>																																																										
-									<h:td style="font-weight:bold;">
-										<combobox id="cmb_specializzazioni_3"   width="305px"  style="tahoma,arial,sans-serif;font-size:8pt;"   value="@{win_pubblicazione$PubblicazioneComposer.pubblicazioneSelezionata.specializzazione3.nome,save-when='none'}"  readonly="true">
+									<h:td>
+										<combobox id="cmb_specializzazioni_3"   width="400px"  style="tahoma,arial,sans-serif;"   value="@{win_pubblicazione$PubblicazioneComposer.pubblicazioneSelezionata.specializzazione3.nome,save-when='none'}"  readonly="true">
 										</combobox>
 									</h:td>
 								</h:tr>
@@ -146,7 +145,7 @@
 							<separator />	
 							<separator />	
 								<h:tr>
-									<h:td style="font-weight:bold;"><h:span style="color: red;">*</h:span> Obbligatorio</h:td>
+									<h:td><h:span style="color: red;">*</h:span> Obbligatorio</h:td>
 									<h:td>
 									</h:td>
 								</h:tr>								

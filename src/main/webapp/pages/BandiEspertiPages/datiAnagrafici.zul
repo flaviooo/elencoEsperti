@@ -39,7 +39,7 @@
 															<hlayout>
 																<h:table>
 																	<h:tr>
-																		<h:td width="150px" style="font-weight:bold;">Codice Fiscale:<h:span style="color: red;">*</h:span>
+																		<h:td width="150px">Codice Fiscale:<h:span style="color: red;">*</h:span>
 																		</h:td>
 																		<h:td>
 																			<textbox id="txt_cf"
@@ -49,48 +49,48 @@
 																		</h:td>
 																	</h:tr>
 																	<h:tr>
-																		<h:td style="font-weight:bold;">Email:<h:span style="color: red;">*</h:span>
+																		<h:td>Email:<h:span style="color: red;">*</h:span>
 																		</h:td>
 																		<h:td>
 																			<textbox id="txt_email" width="300px" value="@{win_modifica$ModificaEspertoComposer.esperto.email,save-when='none'}" style="tahoma,arial,sans-serif;"	constraint="/.+@.+\.[a-z]+/: Inserire un indirizzo di posta elettronica valido" />
 																		</h:td>
 																	</h:tr>
 																	<h:tr>
-																		<h:td style="font-weight:bold;">Nome:<h:span style="color: red;">*</h:span>
+																		<h:td>Nome:<h:span style="color: red;">*</h:span>
 																		</h:td>
 																		<h:td>
 																			<textbox id="txt_nome" width="300px" value="@{win_modifica$ModificaEspertoComposer.esperto.nome,save-when='none'}" style="tahoma,arial,sans-serif;" maxlength="45" constraint="no empty" />
 																		</h:td>
 																	</h:tr>
 																	<h:tr>
-																		<h:td style="font-weight:bold;">Cognome:<h:span style="color: red;">*</h:span>
+																		<h:td>Cognome:<h:span style="color: red;">*</h:span>
 																		</h:td>
 																		<h:td>
 																			<textbox id="txt_cognome" width="300px" value="@{win_modifica$ModificaEspertoComposer.esperto.cognome,save-when='none'}" style="tahoma,arial,sans-serif;" maxlength="45" constraint="no empty" />
 																		</h:td>
 																	</h:tr>
 																	<h:tr>
-																		<h:td style="font-weight:bold;">Partita Iva:</h:td>
+																		<h:td>Partita Iva:</h:td>
 																		<h:td>
 																			<textbox id="txt_pi" width="300px" value="@{win_modifica$ModificaEspertoComposer.esperto.piva,save-when='none'}" 	style="tahoma,arial,sans-serif;"  maxlength="11"/>
 																		</h:td>
 																	</h:tr>
 																	<h:tr>
-																		<h:td style="font-weight:bold;">Telefono:<h:span style="color: red;">*</h:span>
+																		<h:td>Telefono:<h:span style="color: red;">*</h:span>
 																		</h:td>
 																		<h:td>
 																			<textbox id="txt_telefono" width="300px" value="@{win_modifica$ModificaEspertoComposer.esperto.tel,save-when='none'}" style="tahoma,arial,sans-serif;" maxlength="45" constraint="no empty, /[0-9]*/" />
 																		</h:td>
 																	</h:tr>
 																	<h:tr>
-																		<h:td style="font-weight:bold;">Cellulare:<h:span style="color: red;">*</h:span>
+																		<h:td>Cellulare:<h:span style="color: red;">*</h:span>
 																		</h:td>
 																		<h:td>
 																			<textbox id="txt_cellulare" width="300px" value="@{win_modifica$ModificaEspertoComposer.esperto.cel,save-when='none'}" maxlength="45" constraint="no empty, /[0-9]*/" style="tahoma,arial,sans-serif;" />
 																		</h:td>
 																	</h:tr>
 																	<h:tr>
-																		<h:td style="font-weight:bold;">Data di nascita:<h:span style="color: red;">*</h:span>
+																		<h:td>Data di nascita:<h:span style="color: red;">*</h:span>
 																		</h:td>
 																		<h:td>
 																			<datebox id="dta_data_nascita" width="250px" cols="13" value="@{win_modifica$ModificaEspertoComposer.esperto.dataNascita,save-when='none'}" constraint="between 19300101 and 19940101, no empty: inserire una data valida" />
@@ -108,7 +108,7 @@
 											<!-- TABLE LUOGO	-->
 											<h:table>
 											<h:tr>
-												<h:td style="font-weight:bold; ">
+												<h:td>
 													<groupbox width="640px">
 														<caption style="color: #0075BF">Luogo Di Nascita</caption>
 														<vlayout>
@@ -116,29 +116,29 @@
 																<h:table>
 																	<h:tr>
 																		<h:td width="150px">
-																			<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_stato"> Stato: </label>
+																			<label id="lbl_stato"> Stato: </label>
 																			<label id="lbl_stato_mand" style="color: red;">*</label>
 																		</h:td>
 																		<h:td width="150px">
 																			<combobox id="cmb_paesi_nascita"   width="305px" value="@{win_modifica$ModificaEspertoComposer.esperto.paesiNascita.denominazione,save-when='none'}"   style="tahoma,arial,sans-serif;"  model="@{win_modifica$ModificaEspertoComposer.listaPaesiNascita}"  readonly="true">
-																				<comboitem self="@{each=Paesi}" style="tahoma,arial,sans-serif;"   label="@{Paesi.denominazione}" value="@{Paesi.codicePaese}" />
+																				<comboitem self="@{each=Paesi}" label="@{Paesi.denominazione}" value="@{Paesi.codicePaese}" />
 																			</combobox>
 																		</h:td>
 																	</h:tr>
 																	<h:tr>
 																		<h:td width="150px">
-																			<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_regione"> Regione: </label>
+																			<label id="lbl_regione"> Regione: </label>
 																			<label id="lbl_regione_mand" style="color: red;">*</label>
 																		</h:td>
 																		<h:td width="150px">
 																			<combobox id="cmb_regioni_nascita"  width="305px" value="@{win_modifica$ModificaEspertoComposer.esperto.regioniNascita.denominazione,save-when='none'}" style="tahoma,arial,sans-serif;"  model="@{win_modifica$ModificaEspertoComposer.listaRegioniNascita}" readonly="true">
-																				<comboitem self="@{each=Regioni}" style="tahoma,arial,sans-serif;"  label="@{Regioni.denominazione}" value="@{Regioni.codiceRegione}"/>
+																				<comboitem self="@{each=Regioni}" label="@{Regioni.denominazione}" value="@{Regioni.codiceRegione}"/>
 																			</combobox>
 																		</h:td>
 																	</h:tr>
 																	<h:tr>
 																		<h:td width="150px">
-																			<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_citta_nascita_estera"> Citta': </label>
+																			<label id="lbl_citta_nascita_estera"> Citta': </label>
 																			<label id="lbl_citta_nascita_estera_mand" style="color: red;">*</label>
 																		</h:td>
 																		<h:td>
@@ -147,23 +147,23 @@
 																	</h:tr>
 																	<h:tr>
 																		<h:td width="150px">
-																			<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_provincia"> Provincia: </label>
+																			<label id="lbl_provincia"> Provincia: </label>
 																			<label id="lbl_provincia_mand" style="color: red;">*</label>
 																		</h:td>
 																		<h:td width="300px">
 																			<combobox id="cmb_provincie_nascita"  width="305px" value="@{win_modifica$ModificaEspertoComposer.esperto.provincieNascita.denominazione,save-when='none'}" style="tahoma,arial,sans-serif;"  model="@{win_modifica$ModificaEspertoComposer.listaProvincieNascita}" readonly="true">
-																				<comboitem self="@{each=Provincie}" style="tahoma,arial,sans-serif;"  label="@{Provincie.denominazione}" value="@{Provincie.codiceProvincia}"/>
+																				<comboitem self="@{each=Provincie}" label="@{Provincie.denominazione}" value="@{Provincie.codiceProvincia}"/>
 																			</combobox>
 																		</h:td>
 																	</h:tr>
 																	<h:tr>
 																		<h:td	width="150px">
-																			<label	style="font-weight:bold;tahoma,arial,sans-serif;"	id="lbl_citta">Citta':</label>
+																			<label	id="lbl_citta">Citta':</label>
 																			<label	id="lbl_citta_mand" style="color: red;">*</label>
 																		</h:td>
 																		<h:td	width="300px">
 																			<combobox	id="cmb_citta_nascita" width="305px"	value="@{win_modifica$ModificaEspertoComposer.esperto.cittaNascita.denominazione,save-when='none'}"	style="tahoma,arial,sans-serif;"	model="@{win_modifica$ModificaEspertoComposer.listaCittaNascita}"	readonly="true">
-																				<comboitem	self="@{each=Citta}"	style="tahoma,arial,sans-serif;"	label="@{Citta.denominazione}"	value="@{Citta.id}" />
+																				<comboitem	self="@{each=Citta}" label="@{Citta.denominazione}"	value="@{Citta.id}" />
 																			</combobox>
 																		</h:td>
 																	</h:tr>
@@ -179,7 +179,7 @@
 											<!-- TABLE RESIDENZA	-->
 											<h:table>
 											<h:tr>
-												<h:td colspan="2" style="font-weight:bold;">
+												<h:td colspan="2">
 												<groupbox width="640px">
 													<caption style="color: #0075BF">Residenza</caption>
 														<vlayout>
@@ -187,12 +187,12 @@
 																<h:table>
 																	<h:tr>
 																		<h:td width="150px">
-																			<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_stato_res"> Stato: </label>
+																			<label id="lbl_stato_res"> Stato: </label>
 																			<label id="lbl_stato_res_mand" style="color: red;">*</label>
 																		</h:td>
 																		<h:td width="300px">
 																			<combobox id="cmb_paesi"   width="305px" value="@{win_modifica$ModificaEspertoComposer.esperto.paesi.denominazione,save-when='none'}"   style="tahoma,arial,sans-serif;"  model="@{win_modifica$ModificaEspertoComposer.listaPaesi}"  readonly="true">
-																				<comboitem self="@{each=Paesi}" style="tahoma,arial,sans-serif;"   label="@{Paesi.denominazione}" value="@{Paesi.codicePaese}"/>
+																				<comboitem self="@{each=Paesi}" label="@{Paesi.denominazione}" value="@{Paesi.codicePaese}"/>
 																			</combobox>
 																		</h:td>
 																	</h:tr>
@@ -202,18 +202,18 @@
 																<h:table>
 																	<h:tr>
 																		<h:td width="150px">
-																			<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_regione_res"> Regione: </label>
+																			<label id="lbl_regione_res"> Regione: </label>
 																			<label id="lbl_regione_res_mand" style="color: red;">*</label>
 																		</h:td>
 																		<h:td width="300px">
 																			<combobox id="cmb_regioni"  width="305px" value="@{win_modifica$ModificaEspertoComposer.esperto.regioni.denominazione,save-when='none'}" style="tahoma,arial,sans-serif;"  model="@{win_modifica$ModificaEspertoComposer.listaRegioni}" readonly="true">
-																				<comboitem self="@{each=Regioni}" style="tahoma,arial,sans-serif;"  label="@{Regioni.denominazione}" value="@{Regioni.codiceRegione}"/>
+																				<comboitem self="@{each=Regioni}" label="@{Regioni.denominazione}" value="@{Regioni.codiceRegione}"/>
 																			</combobox>
 																		</h:td>
 																	</h:tr>
 																	<h:tr>
 																		<h:td width="150px">
-																			<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_citta_res_estera"> Citta': </label>
+																			<label id="lbl_citta_res_estera"> Citta': </label>
 																			<label id="lbl_citta_res_estera_mand" style="color: red;">*</label>
 																		</h:td>
 																		<h:td>
@@ -226,12 +226,12 @@
 																<h:table>
 																	<h:tr>
 																		<h:td width="150px">
-																			<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_provincia_res"> Provincia: </label>
+																			<label id="lbl_provincia_res"> Provincia: </label>
 																			<label id="lbl_provincia_res_mand" style="color: red;">*</label>
 																		</h:td>
 																		<h:td width="300px">
 																			<combobox id="cmb_provincie"  width="305px" value="@{win_modifica$ModificaEspertoComposer.esperto.provincie.denominazione,save-when='none'}" style="tahoma,arial,sans-serif;"  model="@{win_modifica$ModificaEspertoComposer.listaProvincie}" readonly="true">
-																				<comboitem self="@{each=Provincie}" style="tahoma,arial,sans-serif;"  label="@{Provincie.denominazione}" value="@{Provincie.codiceProvincia}"/>
+																				<comboitem self="@{each=Provincie}" label="@{Provincie.denominazione}" value="@{Provincie.codiceProvincia}"/>
 																			</combobox>
 																		</h:td>
 																	</h:tr>
@@ -241,12 +241,12 @@
 																<h:table>
 																	<h:tr>
 																		<h:td width="150px">
-																			<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_citta_res"> Citta': </label>
+																			<label id="lbl_citta_res"> Citta': </label>
 																			<label id="lbl_citta_res_mand" style="color: red;">*</label>
 																		</h:td>
 																		<h:td width="300px">
 																			<combobox id="cmb_citta" width="305px" value="@{win_modifica$ModificaEspertoComposer.esperto.citta.denominazione,save-when='none'}" style="tahoma,arial,sans-serif;"  model="@{win_modifica$ModificaEspertoComposer.listaCitta}" readonly="true">
-																				<comboitem self="@{each=Citta}"  style="tahoma,arial,sans-serif;"  label="@{Citta.denominazione}" value="@{Citta.id}"/>
+																				<comboitem self="@{each=Citta}"  label="@{Citta.denominazione}" value="@{Citta.id}"/>
 																			</combobox>
 																		</h:td>
 																	</h:tr>
@@ -268,7 +268,7 @@
 																	<h:tr>
 																		<h:td width="150px">
 																			<separator orient="vertical"/>
-																			<h:span style="font-weight:bold;">Cap:<h:span style="color: red;">*</h:span>
+																			<h:span>Cap:<h:span style="color: red;">*</h:span>
 																			</h:span>
 																		</h:td>
 																		<h:td width="300px">
@@ -286,10 +286,9 @@
 										<!-- TABLE RESIDENZA END	-->
 										<h:table>
 											<h:tr>
-												<h:td style="font-weight:bold;">Indirizzo per comunicazioni <h:br/> se differente da residenza:</h:td>
+												<h:td>Indirizzo per comunicazioni <h:br/> se differente da residenza:</h:td>
 												<h:td>
-													<textbox id="txt_domicilio" value="@{win_modifica$ModificaEspertoComposer.esperto.domicilio,save-when='none'}"
-													 style="tahoma,arial,sans-serif;font-size:10pt;" rows="3" width="440px" maxlength="300" />
+													<textbox id="txt_domicilio" value="@{win_modifica$ModificaEspertoComposer.esperto.domicilio,save-when='none'}" width="440px" maxlength="300" />
 												</h:td>
 											</h:tr>
 										</h:table>
