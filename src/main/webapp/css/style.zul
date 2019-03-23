@@ -16,7 +16,7 @@ html,body {
 body {
 	font: 76% tahoma, arial, sans-serif;
 	text-align: center;
-	background: #fff url(../../img/pageBg.jpg) repeat-y 80% 0;
+	background: #fff url(../../img/pageBg.jpg) repeat-y 50% 0;
 	color: #333;
 }
 
@@ -43,7 +43,7 @@ p {
 div#header {
 	position: relative;
 	margin: 0px 10px 5px 10px;
-	background: #fff url(/elencoEsperti/img/header.jpg) no-repeat 100px 0;
+	background: #fff url(../../img/header.jpg) no-repeat 100px 0;
 }
 
 div#container {
@@ -588,25 +588,25 @@ div#footer a {
 div#wrapperGreen {
 	float: left;
 	width: 100%;
-	/*background: #fff url(/ElencoEsperti/img/bgPageIntGreen.png) no-repeat 10px 100%;*/
+	/*background: #fff url(../../img/bgPageIntGreen.png) no-repeat 10px 100%;*/
 }
 
 div#wrapperBlue {
 	float: left;
 	width: 100%;
-	/*background: #fff url(/ElencoEsperti/img/bgPageIntBlue.png) no-repeat 10px 100%;*/
+	/*background: #fff url(../../img/bgPageIntBlue.png) no-repeat 10px 100%;*/
 }
 
 div#wrapperOrange {
 	float: left;
 	width: 100%;
-	/*background: #fff url(/ElencoEsperti/img/bgPageIntOrange.png) no-repeat 10px 100%;*/
+	/*background: #fff url(../../img/bgPageIntOrange.png) no-repeat 10px 100%;*/
 }
 
 div#wrapperGrey {
 	float: left;
 	width: 100%;
-	/*background: #fff url(/ElencoEsperti/img/bgPageIntGrey.png) no-repeat 10px 100%;*/
+	/*background: #fff url(../../img/bgPageIntGrey.png) no-repeat 10px 100%;*/
 }
 
 div#ContenutoGreen,div#ContenutoBlue,div#ContenutoOrange,div#ContenutoGrey
