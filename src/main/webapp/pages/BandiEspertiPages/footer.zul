@@ -11,7 +11,7 @@
 		<toolbarbutton zclass="footer a" id="btn_contatti" href="../pages/BandiEspertiPages/login.zul" label="Contatti"/>|
 		<toolbarbutton zclass="footer a" id="btn_noteLegali" href="../pages/noteLegali.zul" label="Note Legali"/>|
 		 --> 
-		Tutti i diritti riservati © 2018 CSEA
+		Tutti i diritti riservati © 2019 - CSEA - Cassa per i servizi energetici e ambientali
 	</h:div>
 	
 </zk>

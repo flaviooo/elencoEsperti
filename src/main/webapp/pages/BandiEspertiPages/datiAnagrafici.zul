@@ -303,22 +303,9 @@
 										</h:table>
 										<separator />
 										<separator />
-										<separator orient="vertical"  /><separator orient="vertical"  /><separator orient="vertical"  />
-										<separator orient="vertical"  /><separator orient="vertical"  />
-										<separator orient="vertical"  /><separator orient="vertical"  />
-										<separator orient="vertical"  /><separator orient="vertical"  />
-										<separator orient="vertical"  /><separator orient="vertical"  />
-										<separator orient="vertical"  /><separator orient="vertical"  />
-										<separator orient="vertical"  /><separator orient="vertical"  />
-										<separator orient="vertical"  /><separator orient="vertical"  />
-										<separator orient="vertical"  /><separator orient="vertical"  />
-										<separator orient="vertical"  /><separator orient="vertical"  />
-										<separator orient="vertical"  /><separator orient="vertical"  />
+										<separator orient="vertical" width="100px" />
 										<separator orient="vertical"  /><button id="btn_salva"  image="../../icons/32x32/page_save.png" label="Salva modifiche" />
-										<separator orient="horizontal"  />
-										<separator orient="horizontal"  />
-										<separator orient="horizontal"  />
-										<separator orient="horizontal"  />
+										
 									</h:div>
 								</h:div>
 							</vlayout>
