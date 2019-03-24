@@ -8,9 +8,9 @@ import java.util.Properties;
 
 import it.ccse.bandiEsperti.business.dto.AllegatoDTO;
 import it.ccse.bandiEsperti.business.dto.EspertoDTO;
-import it.ccse.bandiEsperti.utils.CVFileFilter;
-import it.ccse.bandiEsperti.utils.CVHelper;
+import it.ccse.bandiEsperti.utils.cvFileHelper.CVFileFilter;
 import it.ccse.bandiEsperti.utils.ConfigHelper;
+import it.ccse.bandiEsperti.utils.cvFileHelper.CVHelper;
 import it.ccse.bandiEsperti.zk.view.BeRows;
 
 import org.zkoss.zk.ui.Executions;
