@@ -1,0 +1,16 @@
+<zk>
+	<window id="win" border="none">
+		<attribute name="onLater">
+	Thread.sleep(3000);
+	Clients.showBusy(null, false);
+	Executions.sendRedirect("/index.zul");
+</attribute>
+
+		<label>
+			<attribute name="onCreate">
+	Clients.showBusy("Timeout di sessione", true);
+	Events.echoEvent("onLater", win, null);
+</attribute>
+		</label>
+	</window>
+</zk>

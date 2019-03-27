@@ -90,35 +90,14 @@
 									</h:td>
 								</h:tr>	
 							</h:table>
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
+							
 							<button id="bnt_ricerca" label="Ricerca" image="../../icons/32x32/search.png" />
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
+							<separator orient="vertical" width="50px"  />
 							<button id="bnt_esporta"  label="Esporta"  image="../../icons/32x32/XLSX.png"/>
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
-							<separator orient="vertical"  />
-							
+							<separator orient="vertical" width="50px"  />
 							<button  id="bnt_aggiungi" label="Aggiungi" image="../../icons/32x32/page_save.png" />
-							
-							<button  id="bnt_aggiorna" visible="false" label="Aggiorna" image="../../icons/32x32/page_save.png" />
-									
-							<separator />
-							<separator />
+							<separator orient="vertical" width="50px"  />
+							<button  id="bnt_aggiorna" label="Aggiorna" image="../../icons/32x32/refresh.png" />
 							<separator />
 							<grid mold="paging" pagingPosition="bottom" width="670px" vflex="false" hflex="false" id="inboxGrid" pageSize="20" autopaging="false"
 								model="@{win_associazioni$AssociazioniComposer.lista}">
@@ -147,8 +126,6 @@
 									</row>
 								</rows>
 							</grid>
-							
-							
 						</h:div>
 					</h:div>
 				</vlayout>

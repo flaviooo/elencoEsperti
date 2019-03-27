@@ -79,89 +79,83 @@
 										<separator />
 										<h:table cellpadding="2" cellspacing="1">
 											<h:tr>
-												<h:td style="font-weight:bold;">Soggetto che ha conferito l'incarico: <h:span style="color: red;">*</h:span>
+												<h:td>Soggetto che ha conferito l'incarico: <h:span style="color: red;">*</h:span>
 												</h:td>
 												<h:td>
 													<textbox constraint="no empty" id="txt_nome_progetto" width="400px" value="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.nomeProgetto,save-when='none'}"
-											style="font:80% tahoma,arial,sans-serif;font-size:8pt;" 
 											maxlength="400"  rows="2"/>
 												</h:td>
 											</h:tr>
 											<h:tr>
-												<h:td style="font-weight:bold;">Descrizione sintetica incarico/progetto<h:br/> (specificare anno): <h:span style="color: red;">*</h:span>
+												<h:td>Descrizione sintetica incarico/progetto<h:br/> (specificare anno): <h:span style="color: red;">*</h:span>
 												</h:td>
 												<h:td>
 													<textbox constraint="no empty" id="txt_abstract" width="400px" value="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.abstractProgetto,save-when='none'}"
-											style="font:80% tahoma,arial,sans-serif;font-size:8pt;" 
 											height="50px;"  rows="5" maxlength="400"/>
 												</h:td>
 											</h:tr>
 											<h:tr>
-												<h:td style="font-weight:bold;">Ambito finanziamento:</h:td>
+												<h:td>Ambito finanziamento:</h:td>
 											</h:tr>
 
 											<h:tr>
-												<h:td style="font-weight:bold;">Internazionale</h:td>
+												<h:td>Internazionale</h:td>
 												<h:td>
-													<checkbox id="chk_internazionale" width="200px" checked="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.internazionale,save-when='none'}"
-											style="font:80% tahoma,arial,sans-serif;font-size:8pt;" />
+													<checkbox id="chk_internazionale" width="200px" checked="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.internazionale,save-when='none'}"/>
 												</h:td>
 											</h:tr>
 											<h:tr>
-												<h:td style="font-weight:bold;">Europeo</h:td>
+												<h:td>Europeo</h:td>
 												<h:td>
-													<checkbox id="chk_europeo" width="200px"  checked="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.europeo,save-when='none'}"
-											style="font:80% tahoma,arial,sans-serif;font-size:8pt;" />
+													<checkbox id="chk_europeo" width="200px"  checked="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.europeo,save-when='none'}"/>
 												</h:td>
 											</h:tr>
 											<h:tr>
-												<h:td style="font-weight:bold;">Nazionale</h:td>
+												<h:td>Nazionale</h:td>
 												<h:td>
-													<checkbox id="chk_miur" width="200px" checked="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.miur,save-when='none'}"
-											style="font:80% tahoma,arial,sans-serif;font-size:8pt;" />
+													<checkbox id="chk_miur" width="200px" checked="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.miur,save-when='none'}"/>
 												</h:td>
 											</h:tr>
 											<h:tr>
-												<h:td style="font-weight:bold;">Ricerca di sistema (RdS)</h:td>
+												<h:td>Ricerca di sistema (RdS)</h:td>
 												<h:td>
-													<checkbox id="chk_rds" width="200px" checked="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.rds,save-when='none'}"
-											style="font:80% tahoma,arial,sans-serif;font-size:8pt;" />
+													<checkbox id="chk_rds" width="200px" checked="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.rds,save-when='none'}"/>
 												</h:td>
 											</h:tr>
 
 											<h:tr>
 
 
-												<h:td style="font-weight:bold;">Programma finanziamento:</h:td>
+												<h:td>Programma finanziamento:</h:td>
 												<h:td>
 													<textbox id="txt_finanziamento" width="400px"  value="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.programmaFinanziamento,save-when='none'}"
-											style="font:80% tahoma,arial,sans-serif;font-size:8pt;" 
 											height="50px;" rows="5" maxlength="400"/>
 												</h:td>
 											</h:tr>
 											<h:tr>
-												<h:td style="font-weight:bold;">Titolo progetto: <h:span style="color: red;">*</h:span>
+												<h:td>Titolo progetto: <h:span style="color: red;">*</h:span>
 												</h:td>
 												<h:td>
-													<textbox  constraint="no empty" id="txt_titolo_progetto" width="400px"  value="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.titoloProgetto,save-when='none'}"
-											style="font:80% tahoma,arial,sans-serif;font-size:8pt;" 
+													<textbox  constraint="no empty" id="txt_titolo_progetto" width="400px"
+													  value="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.titoloProgetto,save-when='none'}"
 											height="50px;"  rows="3" maxlength="300"/>
 												</h:td>
 											</h:tr>
 											<h:tr>
 
-												<h:td style="font-weight:bold;">In corso:</h:td>
+												<h:td>In corso:</h:td>
 												<h:td>
-													<checkbox checked="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.inCorso}"  style="font:80% tahoma,arial,sans-serif;font-size:8pt;"  id="chk_incorso"/>
+													<checkbox checked="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.inCorso}" id="chk_incorso"/>
 												</h:td>
 											</h:tr>
 
 											<h:tr>
-												<h:td style="font-weight:bold;">Anno inizio: <h:span style="color: red;">*</h:span>
+												<h:td>Anno inizio: <h:span style="color: red;">*</h:span>
 												</h:td>
 
 												<h:td>
-													<combobox id="dta_anno" width="60px" style="font:80% tahoma,arial,sans-serif;font-size:8pt;" model="@{win_incarichi$IncarichiComposer.listaAnni}" selectedItem="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.annoString}" readonly="true">
+													<combobox id="dta_anno" width="60px" model="@{win_incarichi$IncarichiComposer.listaAnni}" 
+													selectedItem="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.annoString}" readonly="true">
 														<comboitem label="${each}"  value="${each}"/>
 														<attribute name="onCreate">
                   								self.setConstraint("no empty");
@@ -173,7 +167,8 @@
 
 											<h:tr>
 												<h:td>
-													<label id="lbl_data_fine"  style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;">Anno fine:</label>
+												<!-- 	<label id="lbl_data_fine">Anno fine:</label> -->
+													Anno fine:
 												</h:td>
 												<h:td>
 													<combobox id="dta_data_fine" width="60px" model="@{win_incarichi$IncarichiComposer.listaAnniFine}" selectedItem="@{win_incarichi$IncarichiComposer.precedenteIncaricoSelezionato.dataFineString}" readonly="true">

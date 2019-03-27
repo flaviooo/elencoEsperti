@@ -6,7 +6,7 @@
 <?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" arg0="./win_istruzione"?>
 <zk xmlns:h="http://www.w3.org/1999/xhtml" xmlns:c="client">
 	<window border="none" id="win_istruzione" apply="it.ccse.bandiEsperti.zk.composers.IstruzioneComposer"
-		style="font:80% tahoma,arial,sans-serif;font-size:8pt;" zclass="ContenutoGrey" xmlns:w="client">
+		style="font:80% tahoma,arial,sans-serif;font-size:10pt;" zclass="ContenutoGrey" xmlns:w="client">
 		<include id="includeStyle" src="../../css/style.zul" />		
 		<custom-attributes scope="request" org.zkoss.zk.desktop.nocache="true" />
 		<h:div id="container">
@@ -85,59 +85,59 @@
 							<h:table cellpadding="2" cellspacing="1">
 								<h:tr>
 									<h:td style="font-weight:bold;">
-										<label style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;" id="lbl_tipo"> Tipo: </label> <label id="lbl_tipo_mand" style="color: red;">*</label>
+										<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_tipo"> Tipo: </label> <label id="lbl_tipo_mand" style="color: red;">*</label>
 									</h:td>
 									<h:td>
-										<combobox id="cmb_tipo"   width="305px"  style="tahoma,arial,sans-serif;font-size:8pt;"   value="@{win_istruzione$IstruzioneComposer.istruzioneSelezionata.tipoLaurea.denominazione,save-when='none'}"  model="@{win_istruzione$IstruzioneComposer.listaTipoLaurea}"  readonly="true">
-											<comboitem self="@{each=TipoLaurea}" style="tahoma,arial,sans-serif;font-size:8pt;"   label="@{TipoLaurea.denominazione}" value="@{TipoLaurea.id}"/>
+										<combobox id="cmb_tipo"   width="305px"  style="tahoma,arial,sans-serif;"   value="@{win_istruzione$IstruzioneComposer.istruzioneSelezionata.tipoLaurea.denominazione,save-when='none'}"  model="@{win_istruzione$IstruzioneComposer.listaTipoLaurea}"  readonly="true">
+											<comboitem self="@{each=TipoLaurea}" style="tahoma,arial,sans-serif;"   label="@{TipoLaurea.denominazione}" value="@{TipoLaurea.id}"/>
 										</combobox>
 									</h:td>
 								</h:tr>							
 								<h:tr>
 									<h:td style="font-weight:bold;">
-										<label style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;" id="lbl_titoloStudio"> Titolo di studio:</label> <label id="lbl_titoloStudio_mand" style="color: red;">*</label>
+										<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_titoloStudio"> Titolo di studio:</label> <label id="lbl_titoloStudio_mand" style="color: red;">*</label>
 									</h:td>
 									<h:td>
-										<combobox id="cmb_titolo"  width="305px"  style="tahoma,arial,sans-serif;font-size:8pt;" value="@{win_istruzione$IstruzioneComposer.istruzioneSelezionata.titoloLaurea.denominazione,save-when='none'}"  model="@{win_istruzione$IstruzioneComposer.listaTitoloLaurea}" readonly="true">
-												<comboitem self="@{each=TitoloLaurea}" style="tahoma,arial,sans-serif;font-size:8pt;"  label="@{TitoloLaurea.denominazione}" value="@{TitoloLaurea.id}"/>
+										<combobox id="cmb_titolo"  width="305px"  style="tahoma,arial,sans-serif;" value="@{win_istruzione$IstruzioneComposer.istruzioneSelezionata.titoloLaurea.denominazione,save-when='none'}"  model="@{win_istruzione$IstruzioneComposer.listaTitoloLaurea}" readonly="true">
+												<comboitem self="@{each=TitoloLaurea}" style="tahoma,arial,sans-serif;"  label="@{TitoloLaurea.denominazione}" value="@{TitoloLaurea.id}"/>
 										</combobox>
 									</h:td>
 								</h:tr>
 								<h:tr>
 									<h:td style="font-weight:bold;">
-										<label style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;" id="lbl_estero"> Estero: </label>
+										<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_estero"> Estero: </label>
 									</h:td>
 									<h:td>
 										<checkbox id="chk_estero" width="200px" checked="@{win_istruzione$IstruzioneComposer.istruzioneSelezionata.estero,save-when='none'}"
-											style="font:80% tahoma,arial,sans-serif;font-size:8pt;" />
+											style="font:80% tahoma,arial,sans-serif;" />
 									</h:td>
 								</h:tr>
 								<h:tr>
 									<h:td style="font-weight:bold;">
-										<label style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;" id="lbl_citta">
+										<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_citta">
 												 	Città: 
 										</label><label id="lbl_citta_mand" style="color: red;">*</label>
 									</h:td>
 									<h:td>
-										<combobox id="cmb_citta"  width="305px"  style="tahoma,arial,sans-serif;font-size:8pt;"  value="@{win_istruzione$IstruzioneComposer.istruzioneSelezionata.citta.denominazione,save-when='none'}"  model="@{win_istruzione$IstruzioneComposer.listaCitta}" readonly="true">
-										   <comboitem self="@{each=Citta}"  style="tahoma,arial,sans-serif;font-size:8pt;"  label="@{Citta.denominazione}" value="@{Citta.id}"/>
+										<combobox id="cmb_citta"  width="305px"  style="tahoma,arial,sans-serif;"  value="@{win_istruzione$IstruzioneComposer.istruzioneSelezionata.citta.denominazione,save-when='none'}"  model="@{win_istruzione$IstruzioneComposer.listaCitta}" readonly="true">
+										   <comboitem self="@{each=Citta}"  style="tahoma,arial,sans-serif;"  label="@{Citta.denominazione}" value="@{Citta.id}"/>
 										</combobox>
 									</h:td>
 								</h:tr>
 								<h:tr>
 									<h:td style="font-weight:bold;">
-										<label style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;" id="lbl_ateneo">
+										<label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_ateneo">
 											 	Ateneo: 
 										</label><label id="lbl_ateneo_mand"  style="color: red;">*</label>
 									</h:td>
 									<h:td>
-										<combobox  id="cmb_ateneo"  width="305px"  style="tahoma,arial,sans-serif;font-size:8pt;"  value="@{win_istruzione$IstruzioneComposer.istruzioneSelezionata.atenei.denominazione,save-when='none'}"  model="@{win_istruzione$IstruzioneComposer.listaAtenei}" readonly="true">
-										   <comboitem self="@{each=Atenei}"  style="tahoma,arial,sans-serif;font-size:8pt;"  label="@{Atenei.denominazione}" value="@{Atenei.id}"/>
+										<combobox  id="cmb_ateneo"  width="305px"  style="tahoma,arial,sans-serif;"  value="@{win_istruzione$IstruzioneComposer.istruzioneSelezionata.atenei.denominazione,save-when='none'}"  model="@{win_istruzione$IstruzioneComposer.listaAtenei}" readonly="true">
+										   <comboitem self="@{each=Atenei}"  style="tahoma,arial,sans-serif;"  label="@{Atenei.denominazione}" value="@{Atenei.id}"/>
 										</combobox>
 									</h:td>
 								</h:tr>
 								<h:tr>
-									<h:td style="font-weight:bold;"> <label style="font-weight:bold;tahoma,arial,sans-serif;font-size:8pt;" id="lbl_annoCons"> Anno di conseguimento: </label> <h:span style="color: red;">*</h:span></h:td>
+									<h:td style="font-weight:bold;"> <label style="font-weight:bold;tahoma,arial,sans-serif;" id="lbl_annoCons"> Anno di conseguimento: </label> <h:span style="color: red;">*</h:span></h:td>
 									
 									<h:td>
 										<combobox id="dta_data_conseguimento" width="60px" model="@{win_istruzione$IstruzioneComposer.listaAnni}" selectedItem="@{win_istruzione$IstruzioneComposer.istruzioneSelezionata.dataString}" readonly="true">
@@ -163,7 +163,7 @@
 									 </h:td>
 									<h:td>
 										<textbox id="txt_titoloStudio" width="300px"
-											style="font:80% tahoma,arial,sans-serif;font-size:8pt;"
+											style="font:80% tahoma,arial,sans-serif;"
 											maxlength="250" rows="8"/>
 									</h:td>
 								</h:tr>

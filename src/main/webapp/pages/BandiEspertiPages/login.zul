@@ -14,7 +14,8 @@
 					<h:h3>Selezione Elenco Esperti</h:h3>
 					<separator/>
 							<h:div id="areaRiservata">
-								<h:img src="../../images/login.png" alt="Area Riservata" />
+								<h:img src="../../img/login.png" alt="Area Riservata" />
+								<separator height="20px"/>
 								<h:table cellpadding="2" cellspacing="3">
 									<h:tr>
 										<h:td>Codice Fiscale</h:td>
@@ -29,6 +30,7 @@
 												<separator/><separator/>
 										</h:td>
 									</h:tr>
+									<separator/>
 									<h:tr>
 										<h:td>
 											<label id="lbl_logged" value="Not Logged"
@@ -48,8 +50,7 @@
 						<h:br />
 							<h:ul id="MenuCentro">
 						<h:li>
-						
-					<h:a href="../BandiEspertiPages/registrazione.zul"><h:img src="../../icons\16x16\actions\go-next.png" /> Registrazione</h:a>
+					<h:a href="../BandiEspertiPages/registrazione.zul"><h:img src="../../img/registrazione2.png" /> </h:a>
 						</h:li>
 						<h:li>
 							<h:a href="../BandiEspertiPages/recuperoUtenza.zul"><h:img src="../../icons\16x16\actions\go-next.png" /> Recupero password</h:a>
